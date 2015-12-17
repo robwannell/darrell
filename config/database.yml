@@ -51,4 +51,4 @@ production:
   <<: *default
   database: darrell_production
   username: darrell
-  password: <%= ENV['DARRELL_DATABASE_PASSWORD'] %>
+  password: meltemi808
