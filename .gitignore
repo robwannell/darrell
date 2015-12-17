@@ -7,7 +7,12 @@
 # Ignore bundler config.
 /.bundle
 
+
+
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
 /tmp
+
+/config/database.yml
+/config/initializers/setup_mail.rb
