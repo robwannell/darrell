@@ -1,0 +1,460 @@
+
+body {
+	background-color:#16507F ;
+}
+.clear {
+	clear:both;
+}
+.page {
+	padding:00px 0;
+	background-color:#fff;
+	min-height:57%;
+	
+}
+
+.main {
+	padding:40px 0;
+}
+.navbar {
+  border-radius: 0 !important;
+}
+
+.navbar-toggle {
+	color:#fff;
+}
+
+.navbar-toggle a:hover{
+	background-color: #ff6600;
+}
+
+
+.headset {
+	  background-color:#16507F;
+	  background-size: 100% 100%;
+	  width: 100%;
+	  padding:10px 0 10px;
+	  min-height:180px;
+	}
+	
+	.headset img {
+		margin-top:8px;
+	}
+
+	.mcinput {
+		float:left;
+	}
+
+.cta  {
+	margin-top:28px;
+	width:60%;
+	float:right;
+	background-color:#FBB03B;
+	
+	
+}	
+
+.mailchimp {
+	width:60%;
+	background-color:#143C5B;
+	padding:16px 25px;
+	float:left;
+}
+
+.mailchimp h2 {
+	margin-top:0;
+	font-size:1.4em;
+	color:#fff;
+	text-transform:uppercase;
+	font-family: "clavo", sans-serif;
+}
+
+.mailchimp p{
+	font-size:1.3em;
+	font-weight:400;
+}
+
+.fillin {
+	width:60%;
+}
+.mailchimp input{
+	
+	padding:5px;
+	margin-right:10px;
+	font-size:1em;
+}
+
+.mailchimp label{
+	padding-top:7px;
+	margin-right:3px;
+	font-size:1em;
+}
+
+.mailchimp .btn,  {
+	padding:5px 5px;
+	font-size:1em;
+	text-transform:uppercase;	
+}
+
+.donate {
+	width:100%;
+	text-align:center;
+	
+	color:#fff;
+	padding:15px 0;
+	font-family: "clavo", serif;
+	font-weight:bold;
+}
+
+.donate a {
+	background:none;
+	color:#fff;
+	
+	
+}
+
+.donate button{
+	font-size:2.4em;
+	background-color:#FB9A3B;
+	color:#fff;
+}
+
+.donate button:hover{
+	
+	background-color:#E55E13;
+	color:#fff;
+}
+
+.navbar {
+	font-family: "proxima-nova", sans-serif;
+	background-color: #2F6697;
+	font-size:1.2em;
+	padding:0px 0;
+	margin-bottom:0px;
+	text-transform: uppercase;
+}
+.navbar a {
+	margin:0 10px;
+	color:#fff;
+}
+.navbar a:hover {
+	color:#ff6600;
+}
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:focus {
+	
+    color: #fff;
+}
+
+
+ .navbar-default .navbar-nav > .active > a, 
+ .navbar-default .navbar-nav > .active > a:hover, 
+ .navbar-default .navbar-nav > .active > a:focus {
+	 
+      background: #fff;
+	  
+ }
+ 
+ .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  
+     color: #ff6600;
+ }
+ .droppy {
+	 padding:10px 10px 5px;
+	 
+ }
+ 
+ .droppy:hover {
+ 	background-color:#eee;
+ }
+
+ .dropdown:hover .dropdown-menu {
+ display: block;
+ }
+
+ .jumby {
+	 color:#fff;
+ }
+
+.jumbylead {
+	
+	background:#2E659B;background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+    background: rgba(46, 101, 155, 0.362);
+	
+	
+	
+}
+
+.jumbylead h1{
+	
+	
+			
+}
+
+.mayorleader {
+	font-family: "clavo", serif;
+	font-size: 3.5rem;
+	    color: #fff;
+		text-shadow: 0 1px 0 rgba(0,0,0,.5);
+	
+}
+.jumbylead p{
+	
+	font-size: 1.5em;
+	font-weight:300;
+	    color: #000000;
+}
+
+.outerwrapper {
+	background: url("ds.jpg") center center no-repeat;
+	background-size:cover;
+}
+.jumbotron {
+	min-height:450px;
+	background-color: transparent;
+	text-align:center;
+	padding: 350px 0 10px;
+	margin:0 0;
+}
+
+.learnmore {
+}
+h1 {
+	color: #172943
+}
+
+h2 {
+	
+	color: #172943}
+h3 {
+	color:#B32435;
+}
+
+p {
+	font-size:1.1em;
+}
+
+section {
+	padding-bottom:40px;
+}
+footer {
+	
+	
+	margin-top:0px;
+	color: #fff;
+	text-align:center;
+	padding: 20px 0 50px;
+	
+	
+	
+}
+
+.blueband {
+	background-color:#2E659B;
+	color:#fff;
+	padding: 20px 0;
+	
+}
+
+.blueband .header {
+	
+	font-family: "clavo", serif;
+	padding:5px 10px;
+	background-color:#29ABE2;
+	font-size:1.6em;
+	text-transform:uppercase;
+	 font-style: italic;
+	
+}
+
+.blueband h4 {
+	padding:20px 0 0px;
+	color:#fff;
+	font-family: "clavo", serif;
+}
+
+.blueband p {
+	color:#fff;
+	padding: 10px 0;
+}
+.footnav ul {
+	font-size:1.2em;
+	padding:10px 0 50px;
+	min-height:10;
+	width:80%;
+	margin:0px auto;
+}
+.footnav li {
+	padding:0 20px;
+	list-style:none;
+	display:inline;
+}
+.content {
+	padding:40px 40px;
+}
+.opening {
+	font-size:1em;
+}
+
+.bio {
+	
+}
+
+.flyer{
+	width:600px;
+	margin:0px auto;
+	
+}
+
+.pad15 {
+	padding-left:15px;
+}
+
+.lefty {
+	text-align: left;
+}
+
+.mailer {
+	padding:50px 0;
+}
+
+.breather h2{
+	padding-bottom:20px;
+}
+
+.humans { display: none; }
+
+.success {
+	width: 80%;
+	padding: 50px;
+	margin:0px auto;
+	background-color:#fff;
+	
+	
+}
+
+
+.rh {
+	
+	background-color:#ccc;
+	padding:15px;
+	
+}
+
+.rh h4 {
+	margin-top:0;
+	font-size:1.4em;
+	color:#fff;
+	
+}
+
+.rh p{
+	font-size:1.3em;
+	font-weight:400;
+}
+.rh input{
+	width:100%;
+	padding:5px;
+	margin-bottom:10px;
+	font-size:1.3em;
+}
+
+.rh label{
+	padding-top:7px;
+	margin-right:5px;
+	font-size:1.3em;
+}
+
+.rh .btn {
+	padding:5px 10px;
+	font-size:1.3em;
+}
+
+.events-signup {
+	
+	
+	
+}
+
+.events-signup h4 {
+	color:#B32435;
+	
+}
+
+.events-signup p{
+	font-size:1.3em;
+	font-weight:400;
+}
+.events-signup .email {
+	width:70%;
+}
+.events-signup input{
+	margin-right:20px;
+	padding:5px;
+	margin-bottom:10px;
+	font-size:1.3em;
+}
+
+.events-signup label{
+	padding-top:7px;
+	margin-right:5px;
+	font-size:1.3em;
+}
+
+.events-signup .btn {
+	float:left;
+	padding:5px 10px;
+	font-size:1.3em;
+}
+.rh-donate {
+	margin:10px 0;
+	background-color:#18487F;
+	padding:15px 15px;
+	color:#fff;
+	text-transform:uppercase;
+	text-align:center;
+}
+
+.rh-donate h3 {
+	color:#fff;
+	font-size:1.4em;
+	margin-top:0px;
+}
+.rh-donate button {
+	
+	font-size:1.8em;
+	background-color:#B32435;
+	color:#fff;
+}
+
+.rh-donate button:hover {
+	background-color:#78121E;
+	color:#fff;
+}
+
+.well {
+	padding-top:5px;
+	padding-bottom:15px;
+}
+
+.crunchify-top:hover {
+	color: #fff !important;
+	background-color: #ed702b;
+	text-decoration: none;
+}
+ 
+.crunchify-top {
+	display: none;
+	position: fixed;
+	bottom: 5rem;
+	right: 1rem;
+	padding:10px;
+	font-size: 1.4rem;
+	color: #fff;
+	background-color: rgba(0,0,0,0.3);
+	text-decoration: none;
+	border-radius: 3.2rem;
+	
+	text-align: center;
+	cursor: pointer;
+}
+
+

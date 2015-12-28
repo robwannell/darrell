@@ -8,6 +8,7 @@ GIT
 
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actionmailer (4.2.5)
       actionpack (= 4.2.5)
@@ -48,6 +49,7 @@ GEM
     autoprefixer-rails (6.2.0)
       execjs
       json
+    bcrypt (3.1.10)
     bh (1.3.4)
       actionpack
       activesupport
@@ -119,6 +121,7 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.5)
       sprockets-rails
+    rails-assets-tether (1.1.1)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -179,6 +182,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bh (~> 1.2)
   bootstrap (~> 4.0.0.alpha3)
   byebug
@@ -191,6 +195,7 @@ DEPENDENCIES
   jquery-rails
   mysql2
   rails (= 4.2.5)
+  rails-assets-tether (>= 1.1.0)!
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

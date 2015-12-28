@@ -19,7 +19,9 @@ gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'bh', '~> 1.2'
 gem 'sprockets-rails', '~> 2.3.2'
 
-
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
 
 
 # Use jquery as the JavaScript library
@@ -41,7 +43,7 @@ gem 'capistrano-rbenv', github: "capistrano/rbenv"
 
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+ gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

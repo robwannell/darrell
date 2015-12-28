@@ -1,0 +1,131 @@
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1200px) {
+    .navbar-nav {
+        float: none!important;
+        margin: 0px -15px;
+		
+    }
+	
+	.wrapper {
+		  background-color:#fff;
+		  background-size: 100% 100%;
+		  width: 100%;
+		  padding:0px 0 10px;
+ 
+		}
+		.cta  {
+			font-size:.8em;
+	
+	
+		}
+	
+}
+@media (max-width: 991px) {
+	
+	
+	
+	.headset {
+		  display:none;
+		}
+		
+	
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+		margin-top:20px;
+    }
+	.navbar{
+		padding:5px 0 20px;
+		font-size: .9em;
+	}
+	
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+	
+    .navbar-nav {
+        float: none!important;
+		margin-top:30px;
+		font-size: 1em;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+	
+	
+    /* since 3.1.0 */
+    .navbar-collapse.collapse.in { 
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+}
+
+
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
+of those sections to manage the look and feel of the site. */
+
+.intro-section {
+    min-height: 100%;
+    padding-top: 100px;
+    text-align: center;
+    background: #fff;
+}
+.about-section {
+    min-height: 100%;
+    padding-top: 100px;
+    text-align: center;
+    background: #eee;
+}
+
+.clients-section {
+    min-height: 100%;
+    padding-top: 100px;
+    text-align: center;
+    background: #eee;
+	
+}
+
+.services-section {
+    min-height: 100%;
+    padding-top: 100px;
+    text-align: center;
+    background: #fff;
+}
+
+.contact-section {
+    min-height: 100%;
+    padding-top: 100px;
+    text-align: center;
+    background: #fff;
+	margin-bottom:0px;
+	
+}
+
