@@ -1,0 +1,22 @@
+<h1>Contact Us</h1>
+
+<p class="lead">Perhaps the easiest way to contact us is to use this form and we will respond as soon as possible.</p>
+
+
+   
+	<%= bootstrap_form_for @contact, url: {:action=>'create'} do |f| %>
+
+	  <%= f.text_field :name %>
+
+	  <%= f.email_field :email %>
+
+  	
+		
+	  <%= f.text_area :body, label: 'Message', placeholder: 'Your message' %>
+
+  	
+		
+	  <%= f.submit 'Submit', class: 'btn btn-default btn-about pull-right'%>
+ 
+
+	<% end %>

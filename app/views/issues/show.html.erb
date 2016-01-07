@@ -1,0 +1,78 @@
+<%= content_for :jumbotron do %>
+<div  style="background: url('<%= @issue.avatar.url(:original) %>') center center no-repeat;
+	background-size:cover; height:450px;">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+  
+   
+		   <div class="jumbotron" >
+      
+        <div class="lead jumbylead">
+			  <div class="container "><div class="jumboleader"><%= @issue.title %></div></div>
+        
+      </div>
+    </div>
+
+</div>
+
+
+<% end %>
+
+	<% if current_user %>
+    	<div class="edit alert" >
+    <i> <%= link_to ' Edit ', edit_issue_path(@issue), class: "admin-edit fa fa-edit", dismissible: true %> </i>|<i> <%= link_to ' Delete', @issue, method: :delete, data: { confirm: 'Are you sure?' }, class: "admin-edit fa fa-trash" %></i>
+ 
+    <button class="close" data-dismiss="alert" type="button">
+        <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+      </button>
+   
+    </div>
+<% end %>
+
+<p class="lead">
+
+  <%= @issue.description %>
+
+
+<p>
+ 
+  <%= simple_format(@issue.content) %>
+</p>
+
+ <%= render '/layouts/support.html.erb' %>
+
+
+	
+
+<div class="clear"></div>
+
+<%= content_for :rh do %>
+
+<% if current_user %><div class="edit alert" >
+ <i> <%= link_to ' Add a new Issue  ', new_issue_path, class: "admin-edit fa fa-plus", dismissible: true %> </i>
+ 
+ <button class="close" data-dismiss="alert" type="button">
+     <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+   </button>
+   
+ </div>
+ <% end %>
+ 
+ 
+<% @issues.each do |i| %>
+ <% unless i == @issue %>
+<div class="card issue-card-sml">
+	
+	
+		<%= image_tag i.avatar.url(:thumb), class: "card-img-top issue-img-sml"%>
+		<div class="card-block">
+<h5 class="card-title"><%= i.title %></h5>
+
+ <p><%= link_to 'Learn more', i %></p>
+</div>
+</div>
+<% end %>
+<% end %>
+<% end %>
+
+
+

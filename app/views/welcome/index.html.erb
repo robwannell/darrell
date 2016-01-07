@@ -7,7 +7,7 @@
 		   <div class="jumbotron jumby ">
       
         <div class="lead jumbylead">
-			  <div class="container "><div class="mayorleader"><i>"A Mayor for all of us"</i></div></div>
+			  <div class="container "><div class="jumboleader">A mayor with a vision for Sacramento</div></div>
         
       </div>
     </div>
@@ -17,18 +17,13 @@
 
 <% end %>
 
+	
 
-<%= content_for :main do %>
-
-<h2>When I announced I was running for mayor</h2>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-<p>Fusce imperdiet mi id est viverra tempor pretium nec justo. Phasellus nec mi vel quam tristique ma is in et tellus. Pellentesque vitae ante neque. Aenean pellentesque scelerisque justo vitae pellentesque. Pellentesque volutpat dictum est, et bibendum magna tempus et. Mauris a nibh eu libero vehicula vulputate. Aliquam id dui vel nulla ultrices condimentum fringilla ac leo. Integer pretium vitae elit ornare feugiat. Donec est velit, gravida a ipsum at, luctus ullamcorper ex. Donec eget erat ultricies, placerat est vitae, convallis risus. Sed tincidunt quis justo et malesuada.</p>
+<%= simple_format(@content.content) %>
 
 
+<%= image_tag 'sig.jpg'%>
 
-<% end %>
 
 <%= content_for :rh do %>
 
@@ -38,17 +33,9 @@
 
 <% end %>
 
+<%= content_for :band1 do %>
 
-<div class="blueband">
-	<div class="container">
-		<div class="row">
-		  <div class="col-md-8"><span class="header">News/Views</span>
-			  <h4>Central Labor Council Endorses Steinberg for Mayor</h4><p class="lead">Fusce imperdiet mi id est viverra tempor pretium nec justo. Phasellus nec mi vel quam tristique ma is in et tellus.</div>
-		  <div class="col-md-4"><span class="header">Upcoming Events</span><p>Some text here</div>
-		</div>
-	
-	</div>
-</div>
+<%= render '/layouts/support.html.erb' %>
 
-
+<% end %>
 

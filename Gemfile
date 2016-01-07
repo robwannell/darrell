@@ -18,6 +18,16 @@ gem 'therubyracer', platforms: :ruby
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'bh', '~> 1.2'
 gem 'sprockets-rails', '~> 2.3.2'
+gem 'bootstrap_form'
+
+gem 'font-awesome-sass'
+
+gem "simple_calendar", "~> 2.0"
+
+gem "paperclip", "~> 4.3"
+gem 'friendly_id', '~> 5.1.0'
+
+gem 'will_paginate', '~> 3.0.6'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'

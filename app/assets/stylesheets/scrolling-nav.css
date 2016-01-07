@@ -9,10 +9,13 @@ html {
     height: 100%;
 }
 
+
+
 @media (max-width: 1200px) {
     .navbar-nav {
         float: none!important;
         margin: 0px -15px;
+		font-size:0.8em;
 		
     }
 	
@@ -41,19 +44,30 @@ html {
 	
     .navbar-header {
         float: none;
+		
     }
     .navbar-toggle {
         display: block;
-		margin-top:20px;
+		
     }
+	
+	.navbar-toggler {
+		float:right;
+	}
+	
+	.small-nav-img img{
+		margin-top:10px;
+	}
 	.navbar{
 		padding:5px 0 20px;
-		font-size: .9em;
+		font-size: 1em;
+		
 	}
 	
     .navbar-collapse {
         border-top: 1px solid transparent;
         box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+		
     }
     .navbar-collapse.collapse {
         display: none!important;
@@ -61,18 +75,22 @@ html {
 	
     .navbar-nav {
         float: none!important;
-		margin-top:30px;
+		
+		margin-top:10px;
 		font-size: 1em;
     }
     .navbar-nav>li {
+		clear:both;
         float: none;
     }
     .navbar-nav>li>a {
         padding-top: 10px;
         padding-bottom: 10px;
+		padding-left:10px;
     }
     .navbar-text {
         float: none;
+		
         margin: 15px 0;
     }
 	

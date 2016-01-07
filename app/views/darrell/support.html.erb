@@ -1,0 +1,36 @@
+<%= simple_format(@content.content) %>
+
+
+
+<p>NEW</p>
+
+  <%= bootstrap_form_for @support, url: {:action=>'create'} do |f| %>
+    
+	<%= f.text_field :name, placeholder: 'Your name' %>
+	<%= f.email_field :email, placeholder: 'name@example.com' %>
+	<%= f.text_field :phone, placeholder: '916 555 0070' %>
+	<%= f.text_field :address, placeholder: 'Optional' %>
+	<%= f.text_area :body,label: 'Message', placeholder: 'Anything we should know?' %>
+	
+	
+
+	
+		   
+		   
+		   <%= f.form_group :help, label: { text: "I would like to (please check all that apply):" } do %><br/>
+		    
+			<% @help.each do |item| %>
+			<div class="checkbox" style="margin-left:20px"><%= check_box_tag "help[]", item %> <%= item %></div>
+			 
+		   <% end %>
+		   
+		    <% end %>
+		
+		 
+		
+		 <%= f.submit "Send", class: "btn btn-default btn-about pull-right" %>
+	  
+	  
+	<% end %>
+	
+	<p>&nbsp; <p>&nbsp; <p> &nbsp;

@@ -1,9 +1,26 @@
-<h1>Login</h1>
+<% content_for :login do %>
+	<div class="card login">
+	<h2>Login</h2>
 
 <%= form_tag '/login' do %>
+ <fieldset class="form-group">
+  Email:
+  <div class="controls login-field">
+	  <%= text_field_tag :email %>
+  </div>	
+  
+</fieldset>
 
-  Email: <%= text_field_tag :email %>
-  Password: <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
-
+ <fieldset class="form-group">
+	  Password:
+	 <div class="controls login-field">
+  <%= password_field_tag :password %>
+</div>
+  
+	  <fieldset class="form-group">  
+		  <div class="login-button"><%= submit_tag "Submit" %>
+</div>
+</fieldset>
+<% end %>
+</div>
 <% end %>

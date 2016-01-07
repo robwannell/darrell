@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
 
+before_filter :authorize, only:[:index]
 
+  def index
+    @user = User.all
+  end
 
   def new
   end

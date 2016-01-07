@@ -1,0 +1,22 @@
+<%= bootstrap_form_for(@testamony, label_errors: true) do |f| %>
+ 
+
+  <div class="field">
+  
+    <%= f.text_field :name %>
+  </div>
+  
+  <div class="field">
+  
+    <%= f.text_field :title, placeholder: "e.g. Supervisor, Council Member, etc... Optional" %>
+  </div>
+  
+  <div class="field">
+   
+    <%= f.text_area :quote %>
+  </div>
+ 
+  <div class="actions pull-right">
+    <%= f.submit %>
+  </div>
+<% end %>

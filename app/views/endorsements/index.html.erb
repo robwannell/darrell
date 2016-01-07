@@ -1,0 +1,126 @@
+<%= content_for :override do %>
+
+
+<div class="testamonies">
+
+
+<div  class="carousel slide" data-ride="carousel" data-pause="false">
+ 
+  
+  
+  
+  <div class="carousel-inner" role="listbox">
+	  
+	   <% @testamonies.each do |testamony| %>
+	   <div class="carousel-item  <% if testamony == @first %>active<% end %>">
+		   
+		 <div class="testamony">
+		 <div class="testamony-quote">
+	
+		 	<i><span class="fa fa-quote-left quote"></span> </i> <%= testamony.quote %> <i><span class="fa fa-quote-right quote"></span> </i></div>
+		 
+		 <div class="testamony-name"><%= testamony.name %></div>
+		 
+		 <div class="testamony-title"><%= testamony.title %></div>
+
+
+
+
+
+	
+		     
+
+
+		 </div>
+		   
+		   </div>
+	   <% end %>
+    
+  </div>
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="icon-prev" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="icon-next" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+		
+<% end %>
+		
+	<h1>Endorsements for Darrell</h1>
+	
+	<p class="lead">Join the growing group of Darrell supporters</p>
+	
+		 <h2>Public Officials</h2> 
+		  
+		<% @electeds.each do |e| %>
+		  
+		 <p> <%= e.title %> <%= e.firstname %> <%= e.lastname %> <% if current_user %> 
+			<span class="label label-warning"> <%= e.rank %></span>
+			  <span class="edit alert edit-endorsement" >
+				   <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
+		  </span>
+		  
+		  
+		 <% end %>
+		 
+ 		 <% unless @orgs.blank? %><h2>Organizations</h2> <% end %>
+		  
+ 		<% @orgs.each do |e| %>
+		  
+ 		 <p><%= e.organization %>  <% if current_user %>    <span class="edit alert edit-endorsement" >
+				   <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %></p>
+		  </span>
+		  <% end %></p>
+		  
+ 		 <% end %>
+		 
+ 		 <h2>Individuals</h2> 
+		  
+ 		<% @individuals.each do |e| %>
+		  
+ 		 <p>  <%= e.title %> <%= e.firstname %> <%= e.lastname %>  <% if current_user %>   <span class="edit alert edit-endorsement" >
+				   <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
+		  </span></p></span>
+		  
+ 		 <% end %>
+		
+		
+		
+	
+		
+		<p class="bttop"><%= link_to '<span class="glyphicon-class glyphicon glyphicon-chevron-up"></span> Back to top'.html_safe, '#Top' %></p>
+		
+		
+		<%= content_for :rh do %>
+		
+		<% if current_user %><div class="edit alert" >
+		 <i> <%= link_to ' Add an endorsement  ', new_endorsement_path, class: "admin-edit fa fa-user-plus", dismissible: true %> </i>
+ 
+		 <button class="close" data-dismiss="alert" type="button">
+		     <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+		   </button>
+   
+		 </div>
+		 
+		 <div class="edit alert" >
+		 		 <i> <%= link_to ' Add a testamony  ', new_testamony_path, class: "admin-edit fa fa-user-plus", dismissible: true %> </i>
+ 
+		 		 <button class="close" data-dismiss="alert" type="button">
+		 		     <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+		 		   </button>
+   
+		 		 </div>
+		 <% end %>
+		 
+		
+		<% end %>
+		
+		<script>
+		$('.carousel').carousel({
+		   interval: 6000
+		   })
+		</script>

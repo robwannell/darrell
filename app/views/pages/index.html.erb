@@ -1,0 +1,27 @@
+
+
+<h1>Page Content Editor</h1>
+
+<div class="caveat">
+	
+	<strong>WARNING</strong> - Only edit these pages if you know what you are doing. You can not undo any changes!
+	
+</div>
+	
+	
+<table class="table table-hover">
+    <% @pages.each do |page| %>
+      <tr>
+		<td> <span class="label label-warning"><%= page.id %></span> <td class="page-title-col"><%= page.pagetitle %></td>
+        
+      <td><%= link_to 'Edit', edit_page_path(page) %> | <%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+     </tr>
+	 
+    <% end %>
+ 
+</table>
+<br>
+
+<% content_for :rh do %>
+<%= link_to 'New Page', new_page_path, class: "btn btn-primary" %>
+<% end %>

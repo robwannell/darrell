@@ -1,0 +1,33 @@
+<%= content_for :override do %>
+
+<h1>Darrell on the Issues</h1>
+
+<p class="lead">Learn more about Darrell's vision for Sacramento, and the key policies he will champion as Mayor.
+<p class="lead">As the campaign develops, he will be talking about more issues, so stay tuned. 
+ 
+ 
+<% @issues.each do |i| %>
+ 
+<div class="card issue-card">
+	
+	
+		<%= image_tag i.avatar.url(:medium), class: "card-img-top issue-img"%>
+		<div class="card-block">
+<h4 class="card-title"><%= i.title %></h4>
+ <p class="card-text"><%= i.description %></p>
+ <p><%= link_to 'Learn more', i, class: "btn btn-primary" %></p>
+</div>
+</div>
+
+<% end %>
+
+
+
+
+
+<% end %>
+
+<%= content_for :band1 do %>
+<%= render '/layouts/support.html.erb' %>
+<% end %>
+

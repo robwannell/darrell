@@ -1,6 +1,33 @@
 Rails.application.routes.draw do
  
+  get 'donate', to: 'donate#index'
 
+  resources :mail_recipients
+  resources :testamonies
+  resources :endorsements
+  resources :events
+  resources :news
+  resources :issues
+  get 'darrell/about', to: 'darrell#about'
+
+  get 'darrell/issues', to: 'darrell#issues'
+  
+  resources :contact, only: [:new, :create]
+  get '/contact', to: 'contact#new'
+  resources :support, only: [:new, :create]
+  get '/support', to: 'support#new'
+ 
+ 
+   match '/send_mail', to: 'contact#send_mail', via: 'post'
+   match '/send_support_mail', to: 'support#send_support_mail', via: 'post'
+   
+
+  get 'bio', to: 'bio#index'
+
+  get 'admin', to: 'admin#index'
+
+  resources :pages
+ 
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -12,7 +39,9 @@ Rails.application.routes.draw do
    # Login and Logout
       get '/signup' => 'users#new'
       post '/users' => 'users#create'
-
+      get 'users', to: 'users#index'
+      
+      
   # these routes are for showing users a login form, logging them in, and logging them out.
     get '/login' => 'sessions#new'
     post '/login' => 'sessions#create'

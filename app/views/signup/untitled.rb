@@ -1,4 +1,6 @@
-<h1>Signup!</h1>
+<div class="container">
+	<div class="card login">
+<h1>Signup user</h1>
 
 <%= form_for :user, url: '/users' do |f| %>
 

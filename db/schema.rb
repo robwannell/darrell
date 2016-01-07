@@ -11,7 +11,83 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151228181734) do
+ActiveRecord::Schema.define(version: 20160107013133) do
+
+  create_table "endorsements", force: :cascade do |t|
+    t.string   "firstname",    limit: 255
+    t.string   "lastname",     limit: 255
+    t.string   "category",     limit: 255
+    t.string   "title",        limit: 255
+    t.string   "organization", limit: 255
+    t.integer  "rank",         limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "name",                limit: 255
+    t.datetime "start_time"
+    t.string   "location",            limit: 255
+    t.text     "content",             limit: 65535
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.string   "slug",                limit: 255
+    t.string   "avatar_file_name",    limit: 255
+    t.string   "avatar_content_type", limit: 255
+    t.integer  "avatar_file_size",    limit: 4
+    t.datetime "avatar_updated_at"
+  end
+
+  create_table "issues", force: :cascade do |t|
+    t.string   "title",               limit: 255
+    t.text     "description",         limit: 65535
+    t.text     "content",             limit: 65535
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.string   "avatar_file_name",    limit: 255
+    t.string   "avatar_content_type", limit: 255
+    t.integer  "avatar_file_size",    limit: 4
+    t.datetime "avatar_updated_at"
+    t.string   "slug",                limit: 255
+  end
+
+  create_table "mail_recipients", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "email",      limit: 255
+    t.string   "mailer",     limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "news", force: :cascade do |t|
+    t.string   "title",               limit: 255
+    t.text     "description",         limit: 65535
+    t.text     "content",             limit: 65535
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.string   "avatar_file_name",    limit: 255
+    t.string   "avatar_content_type", limit: 255
+    t.integer  "avatar_file_size",    limit: 4
+    t.datetime "avatar_updated_at"
+    t.string   "slug",                limit: 255
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.string   "pagetitle",   limit: 255
+    t.text     "keywords",    limit: 65535
+    t.text     "description", limit: 65535
+    t.text     "content",     limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "testamonies", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.text     "quote",      limit: 65535
+    t.string   "title",      limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name",            limit: 255

@@ -1,0 +1,56 @@
+<%= content_for :jumbotron do %>
+<div  class="outerwrapper-news">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+  
+   
+		   <div class="jumbotron" >
+      
+        <div class="lead jumbylead">
+			  <div class="container "><div class="jumboleader">Latest News</div></div>
+        
+      </div>
+    </div>
+
+</div>
+
+
+<% end %>
+
+
+
+
+    <% @news.each do |news| %>
+ <div class="row">
+     <div class="col-md-3 news-img"> <%= image_tag news.avatar.url(:thumb)%>  </div> 
+      <div class="col-md-9 news-teaser"><h3>  <%= news.title %> </h3>
+		 <small class="text-muted"><%= news.updated_at.strftime("%B %d %Y")%></small> 
+    <p><%= news.description %> <small><%=     
+    link_to "read more", news 
+ %></small><br/>
+</p>
+ 
+      </div>
+		
+		
+		  </div>
+		  
+		 
+		  
+		  
+    <% end %>
+	<div class="pagination">
+  <%= will_paginate @news %>
+</div>
+<br>
+
+<% content_for :rh do %>
+<% if current_user %><div class="edit alert" >
+ <i> <%= link_to ' Add a new story  ', new_news_path, class: "admin-edit fa fa-plus", dismissible: true %> </i>
+ 
+ <button class="close" data-dismiss="alert" type="button">
+     <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+   </button>
+   
+ </div>
+ <% end %>
+<% end %>

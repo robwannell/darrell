@@ -1,0 +1,33 @@
+<h1>Issues Editor</h1>
+
+<div class="caveat">
+	
+	<strong>WARNING</strong> - Only edit these pages if you know what you are doing. You can not undo any changes!
+	
+</div>
+	
+	
+<table class="table table-hover">
+    <% @issues.each do |issue| %>
+      <tr>
+		<td> <span class="label label-warning"><%= issue.id %></span> <td class="page-title-col"><%= issue.title %></td>
+        
+      <td><%= link_to 'Edit', edit_issue_path(issue) %> | <%= link_to 'Destroy', issue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+     </tr>
+	 
+    <% end %>
+ 
+</table>
+<br>
+
+<br>
+
+<% content_for :rh do %>
+<div class="card admin-card">
+<div class="card-block">
+	
+<p class="card-text"><%= link_to 'Add a New Issue', new_issue_path, class: "btn btn-primary" %></p>
+<p class="card-text"><%= link_to 'Go to Issues page', '/darrell/issues', class: "btn btn-primary" %></p>
+</div>
+</div>
+<% end %>

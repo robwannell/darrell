@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="card login">
+<h1>Signup user</h1>
+
+<%= form_for :user, url: '/users' do |f| %>
+
+<fieldset class="form-group">
+  Name:
+   <div class="controls login-field"><%= f.text_field :name %></div>
+ </fieldset>
+  <fieldset class="form-group">
+  Email:
+   <div class="controls login-field"><%= f.text_field :email %></div>
+  </fieldset> 
+  <fieldset class="form-group">
+  Password:
+   <div class="controls login-field"><%= f.password_field :password %></div>
+  </fieldset> 
+  <fieldset class="form-group">
+  Password Confirmation:
+   <div class="controls login-field"><%= f.password_field :password_confirmation %></div>
+   </fieldset>
+  <fieldset class="form-group">
+  <%= f.submit "Submit" %>
+ </fieldset>
+<% end %>
+
+<%= link_to 'Show users', users_path %>
+
+</div>
+</div>

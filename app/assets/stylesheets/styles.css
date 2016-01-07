@@ -2,6 +2,15 @@
 body {
 	background-color:#16507F ;
 }
+
+.has-error {
+	color:red;
+	padding:5px;
+	background-color: #F0CCCB;
+}
+.lead {
+	font-size: 1.4em;
+}
 .clear {
 	clear:both;
 }
@@ -13,7 +22,7 @@ body {
 }
 
 .main {
-	padding:40px 0;
+	padding:40px 20px;
 }
 .navbar {
   border-radius: 0 !important;
@@ -112,13 +121,13 @@ body {
 	
 }
 
-.donate button{
+.donate a{
 	font-size:2.4em;
 	background-color:#FB9A3B;
 	color:#fff;
 }
 
-.donate button:hover{
+.donate a:hover{
 	
 	background-color:#E55E13;
 	color:#fff;
@@ -158,10 +167,13 @@ body {
      color: #ff6600;
  }
  .droppy {
-	 padding:10px 10px 5px;
+	 padding:5px 0;
 	 
  }
  
+ .droppy a {
+	 color:#153C5B;
+ }
  .droppy:hover {
  	background-color:#eee;
  }
@@ -189,11 +201,12 @@ body {
 			
 }
 
-.mayorleader {
+.jumboleader {
 	font-family: "clavo", serif;
 	font-size: 3.5rem;
 	    color: #fff;
 		text-shadow: 0 1px 0 rgba(0,0,0,.5);
+		text-align:left;
 	
 }
 .jumbylead p{
@@ -207,6 +220,12 @@ body {
 	background: url("ds.jpg") center center no-repeat;
 	background-size:cover;
 }
+
+.outerwrapper-news {
+	background: url("newsjumbo.jpg") center center no-repeat;
+	background-size:cover;
+}
+
 .jumbotron {
 	min-height:450px;
 	background-color: transparent;
@@ -215,7 +234,23 @@ body {
 	margin:0 0;
 }
 
+.jumbotron-issues {
+	min-height:450px;
+	background-color: transparent;
+	text-align:center;
+	padding: 300px 0 10px;
+	margin:0 0;
+}
+
+
+
 .learnmore {
+}
+
+.admin-button {
+	margin-top:50px;
+	clear:both;
+	float:right;
 }
 h1 {
 	color: #172943
@@ -225,11 +260,12 @@ h2 {
 	
 	color: #172943}
 h3 {
-	color:#B32435;
+	color: #172943
 }
 
 p {
 	font-size:1.1em;
+	font-weight:300;
 }
 
 section {
@@ -246,6 +282,28 @@ footer {
 	
 	
 }
+
+.paidforby {
+	border:1px solid #fff;
+	padding:10px;
+	text-align:center;
+	font-size:0.8em;
+	width:30%;
+	margin:0px auto;
+	margin-bottom:20px;
+}
+.notices {
+	margin:20px 0 0;
+	padding:20px;
+}
+
+.pagination {
+	width:100%;
+	text-align:center;
+	
+}
+
+
 
 .blueband {
 	background-color:#2E659B;
@@ -457,4 +515,343 @@ footer {
 	cursor: pointer;
 }
 
+.login {
+	padding:20px;
+	width: 300px;
+	margin:0px auto;
+	margin-bottom:40px;
+	background-color:#efefef;
+}
 
+.login-field input{
+	width:100%;
+}
+
+.login-button {
+	text-align: right;
+	margin-top:30px;
+}
+
+.caveat {
+	padding:10px;
+	background-color: #FFF3F3;
+	color: #FD0F0F;
+	margin:20px 0;
+}
+.page-title-col {
+	width:70%;
+}
+
+.edit-content {
+	min-height:300px;
+}
+
+.admin-card {
+	border:0;
+	background-color:#EEF6F9;
+}
+.issue-card {
+	float:left;
+	width:300px;
+	height: 500px;
+	margin:20px 30px 20px 35px;
+	border:1px solid #efefef;
+}
+
+.issue-card-sml {
+	font-size: 0.9em;
+	width:300px;
+	
+	margin:20px 0px ;
+	padding-bottom:0px;
+	border:0;
+	border-bottom: 1px solid #eee;
+}
+
+.no-padding {
+	padding-left:0px;
+	padding-right:0px;
+	padding-bottom:0px;
+}
+
+
+
+.issue-card img {
+	height:200px;
+	width: 100%;
+}
+
+.issue-card-sml img {
+}
+
+
+input.choose-image {
+	padding:10px 20px;
+}
+
+.support-me {
+	width:80%;
+	
+	margin:0px auto;
+	text-align:center;
+	border-top:2px solid #FB9A3B;
+	border-bottom:2px solid #FB9A3B;
+	padding:20px 0;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.support-me h3 {
+	
+	text-transform:uppercase;
+	color:#FB9A3B;
+}
+
+.news-img {
+	padding:10px 20px;
+}
+
+.news-teaser h3 {
+	font-size:1.5em;
+	font-weight:400;
+	margin-bottom:0;
+}
+.news-teaser {
+	font-weight:300;
+	padding:10px 0px 0 20px;
+}
+
+.newslink a{
+	color:#fff;
+	text-transform:uppercase;
+	
+}
+
+.newslink {
+	color:#FBB03B;
+	margin-bottom:0;
+	padding-bottom:0;
+}
+
+.fa-read-more {
+	padding-left:5px;
+	
+	color:#FBB03B;
+}
+
+.edit {
+	padding: 5px 10px;
+	color:#ccc;
+	margin-bottom:10px;
+	background-color:#FBFBFB;
+	
+}
+.fa-edit {
+	color:#aaa;
+	
+}
+
+
+.admin-edit {
+	color:#aaa;
+	text-transform:uppercase;
+	margin-top:7px;
+}
+
+.reception-edit {
+	padding:5px;
+	background-color:#DADAD9;
+}
+
+.admin-edit:hover {
+	color:#FB9A3B;
+	text-decoration:none;
+}
+
+
+.read-more a{
+	font-size: 0.7em;
+	color:#FBB03B;
+}
+
+.rails-bootstrap-forms-date-select,
+.rails-bootstrap-forms-time-select,
+.rails-bootstrap-forms-datetime-select {
+  select {
+    display: inline-block;
+    width: auto;
+  }
+}
+.rails-bootstrap-forms-error-summary {
+  margin-top: 10px;
+}
+
+.simple-calendar {
+	font-size:1.3em;
+}
+.calendar {
+ padding-bottom:30px;
+} 
+
+ .simple-calendar {
+ 	 text-align:center;
+ }
+ 
+ .simple-calendar a{
+ 	 color:#FB9A3B;
+	 font-size:0.7em;
+ }
+ .calendar-header {
+  text-align:center;
+  font-size: 2.8em;
+  padding:10px;
+  margin-bottom:20px;
+  border:1px solid red;
+ }
+ .calendar-header a{
+  padding: 0 10px;
+ }
+ 
+ .calendar th{
+  color:#333;
+  text-align:center;
+ }
+ 
+ .current-month {
+	 background-color: #F8FBFF;
+ }
+ .calendar td {
+  border:5px solid #fff;
+  color:#333;
+  vertical-align: top;
+  text-align:center;
+  width: 120px;
+  height: 150px;
+  padding:10px;
+ 
+ }
+ 
+ .calendar td a{
+  color:#FB9A3B;
+  font-size:0.8em;
+  
+ }
+ 
+ .day {
+ }
+ 
+
+ .past {
+  background-color: #F8FBFF;
+ }
+ 
+ .wday-6, .wday-0{
+  background-color: #FFF3E1;
+ }
+ 
+ td.today {
+  color: #ff6600;
+  background-color: #FBEBEB;
+  
+ }
+ 
+ .next-month, .prev-month {
+  background-color: #F4F9F9;
+ }
+ 
+ .event-details {
+	 padding:20px;
+	 
+ }
+ 
+ .event-details h2,h3{
+ }
+ 
+ .event-details h3{
+	 color:#FB9A3B;
+ }
+ 
+ .event-img {
+	 padding:20px 0px;
+	
+	 margin-bottom:30px;
+ }
+ 
+ .eventlist {
+	 border-top:1px solid #eee;
+	 margin: 20px 0 30px;
+	 padding-top:10px;
+ }
+ 
+ .edit-endorsement {
+	 font-size: 0.6em;
+	 text-transform:uppercase;
+	 font-weight:400;
+ }
+ 
+ .edit-testamony {
+	 font-size: 0.6em;
+	 text-transform:uppercase;
+	 font-weight:400;
+ }
+ .testamony {
+	 
+	 padding:20px;
+	 text-align:center;
+	 margin:20px 0;
+ }
+ .testamony-quote {
+	 font-size: 1.8em;
+	 font-family: "clavo", serif;
+ }
+ 
+ .testamony-title {
+	 color:#666;
+	 font-family: "clavo", serif;
+	 font-size: 1.3em;
+ }
+ 
+ .testamony-name {
+ 	color:#666;
+	font-weight:bold;
+	font-size: 1.7em;
+	margin-top:20px;
+	
+ }
+ 
+ .quote {
+	 color:#FBB03B;
+	 font-size: 0.8em;
+ }
+ 
+ .carousel {
+	 padding:20px 0;
+	 background-color:#F3F3F3;
+	 margin:0 0 50px 0;
+	 min-height:350px;
+ }
+ .carousel-control.left, .carousel-control.right {
+     background-image: none;
+	 display: none;
+ }
+ 
+.carousel-indicators a{
+	
+	color:red;
+	padding-top:50px;
+}
+
+.receptionist {
+	background-color:#efefee;
+	padding:20px;
+	margin-bottom:20px;
+}
+
+.receptionist h3 {
+	text-transform:capitalize;
+}
+
+.disclaimer {
+	font-size:1em;
+	font-style:italic;
+}

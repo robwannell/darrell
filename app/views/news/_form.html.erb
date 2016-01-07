@@ -1,0 +1,53 @@
+<%= bootstrap_form_for(@news) do |f| %>
+  <% if @news.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@news.errors.count, "error") %> prohibited this news from being saved:</h2>
+
+      <ul>
+      <% @news.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+   
+    <%= f.text_field :title %>
+	
+  	  <% unless @news.avatar.blank? %>
+  	  <p><b>Current image</b><br/><%= link_to (image_tag @news.avatar.url(:thumb)), @news.avatar.url(:original), target: '_blank' %> </p><%= f.file_field :avatar, label: 'Add a new image', class: 'choose-image'%></p>
+  	  <% else %>
+  	  <div class="field">
+  	  <%= f.file_field :avatar, label: 'Add an image for this issue - ', class: 'choose-image'%>
+    </div>
+  	  <% end %>
+	  
+  </div>
+  <div class="field">
+  
+    <%= f.text_area :description, maxlength: "130", id: "alloptions"%>
+  </div>
+  <div class="field">
+   
+    <%= f.text_area :content, class: "edit-content"%>
+  </div>
+   <div class="actions pull-right">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<script>
+$(document).ready(function(){
+$('textarea#alloptions').maxlength({
+alwaysShow: true,
+threshold: 10,
+	showCharsTyped: false,
+warningClass: "label label-success",
+limitReachedClass: "label label-important label-danger",
+separator: ' of ',
+preText: 'You have ',
+postText: ' characters remaining.'
+});
+});
+</script>
