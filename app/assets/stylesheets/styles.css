@@ -18,11 +18,13 @@ body {
 	padding:00px 0;
 	background-color:#fff;
 	min-height:57%;
+	padding-bottom:50px;
 	
 }
 
 .main {
 	padding:40px 20px;
+	
 }
 .navbar {
   border-radius: 0 !important;
@@ -146,7 +148,7 @@ body {
 	color:#fff;
 }
 .navbar a:hover {
-	color:#ff6600;
+	color:#FB9A3B;
 }
 .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:focus {
 	
@@ -164,7 +166,7 @@ body {
  
  .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   
-     color: #ff6600;
+     color: #FB9A3B;
  }
  .droppy {
 	 padding:5px 0;
@@ -283,6 +285,43 @@ footer {
 	
 }
 
+.footer-col {
+	padding:20px;
+	text-align:left;
+	font-size:1em;
+	font-weight: 300;
+}
+
+.footer-col strong {
+	font-weight: 330;
+}
+
+.footer-col h3 {
+	font-size:1.1em;
+	text-transform:uppercase;
+	color:#FB9A3B;
+	font-weight:400;
+}
+
+.footer-col ul {
+	margin-left:0;
+	padding-left:0;
+}
+.footer-col li{
+	list-style:none;
+	text-transform:uppercase;
+	font-size:1.1em;
+	
+}
+
+.footer-col li a {
+	color:#fff;
+}
+
+.footer-col li a:hover {
+	color:#FB9A3B;
+	text-decoration:underline
+}
 .paidforby {
 	border:1px solid #fff;
 	padding:10px;

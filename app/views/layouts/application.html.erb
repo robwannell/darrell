@@ -162,10 +162,54 @@
 
 </div>
       <footer>
+		  <div class="container">
+			  <div class="row">
+			      <div class="col-sm-4 footer-col">
+			        <h3>Contact us</h3>
+					<p><strong>Steinberg for Sacramento Mayor</strong><br/>
+						1100 O Street, Suite 200<br/>
+						Sacramento, CA 95814</p>
+					<p><strong>Tel:</strong> 555-123-456<br/>
+					<strong>Fax:</strong> 555-123-678<br/>
+					
+
+						
+			      </div>
+			      <div class="col-sm-3 footer-col">
+			       <h3>Site map</h3>
+				   <ul>
+					   <li><%= link_to 'Home', root_url, class: 'nav-link' %></li>
+					   <li><%= link_to 'About Darrell', darrell_about_path, class: 'nav-link' %></li>
+					   <li><%= link_to 'On the Issues', darrell_issues_path, class: 'nav-link' %></li>
+					   <li><%= link_to 'News', news_index_path, class: 'nav-link' %></li>
+					   <li><%= link_to 'Events', events_path, class: 'nav-link' %></li>
+					  
+					   
+				   </ul>
+			      </div>
+				  
+			      <div class="col-sm-3 footer-col">
+			       <h3>&nbsp;</h3>
+				   <ul>
+					   
+					   <li><%= link_to 'Endorsements', endorsements_path, class: 'nav-link' %></li>
+					   <li><%= link_to 'Support', support_path, class: 'nav-link' %></li>
+					   <li><%= link_to 'Donate', donate_path, class: 'nav-link' %></li>
+					   <li><%= link_to 'Contact', contact_path, class: 'nav-link' %></li>
+					   
+				   </ul>
+			      </div>
+				  
+				  
+			      <div class="col-sm-2 footer-col">
+			       <h3>Follow Darrell</h3>
+			      </div>
+			      
+			    </div>
+				  
+				  
 		  <div class="footnav">
-          <ul>
-          
-          </ul>
+         
 	  </div>
 		  <div class="clear"></div>
         <p>&copy; <%= Date.today.year %> Steinberg for Sacramento Mayor 2016 ID# 1380886</p>
@@ -179,6 +223,8 @@
 			<% end %>
 			
 		</p>
+		
+	</div>
       </footer>
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
