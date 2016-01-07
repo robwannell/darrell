@@ -3,7 +3,7 @@ class ContactMailer < ActionMailer::Base
           
   
   
-  default to: @recip.email
+  
 
     def contact_email(name, email, body)
         @name = name

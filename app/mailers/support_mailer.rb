@@ -1,7 +1,7 @@
 class SupportMailer < ActionMailer::Base
   default from: 'notifier@steinberg4sac.com'
   
-  default to: @recip.email
+ 
     
     def support_email(name, email, phone, address, body, help)
         @name = name
