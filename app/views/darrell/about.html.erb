@@ -1,9 +1,34 @@
 <%= simple_format(@content.content) %>
-<%= render '/layouts/support.html.erb' %>
 
+
+<p>	<a href="#" class="crunchify-top">↑Back to top</a>
 
 <% content_for :rh do %>
 
 <%= image_tag 'headshot.jpg', class:"img-fluid"%>
 
+<%= render '/layouts/endorsement_panel.html.erb' %>
+<%= render '/layouts/issues_panel.html.erb' %>
+<%= render '/layouts/support_panel.html.erb' %>
 <% end %>
+
+<script>            
+jQuery(document).ready(function() {
+	var offset = 220;
+	var duration = 500;
+	jQuery(window).scroll(function() {
+		if (jQuery(this).scrollTop() > offset) {
+			jQuery('.crunchify-top').fadeIn(duration);
+		} else {
+			jQuery('.crunchify-top').fadeOut(duration);
+		}
+	});
+
+	jQuery('.crunchify-top').click(function(event) {
+		event.preventDefault();
+		jQuery('html, body').animate({scrollTop: 0}, duration);
+		return false;
+	})
+});
+</script>
+		   

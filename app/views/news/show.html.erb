@@ -34,7 +34,7 @@
   <%= simple_format(@news.content) %>
 </p>
 
- <%= render '/layouts/support.html.erb' %>
+ 
 
 
 	
@@ -61,9 +61,9 @@
 	
 		<%= image_tag i.avatar.url(:thumb), class: "card-img-top issue-img-sml"%>
 		<div class="card-block no-padding">
-<h5 class="card-title"><%= i.title %></h5>
+<h5 class="card-title"><%= link_to i.title, i %></h5>
 
- <p><%= link_to 'Learn more', i %></p>
+ <p><%= link_to 'Read more', i %></p>
 </div>
 </div>
 <% end %>
