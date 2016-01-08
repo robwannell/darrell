@@ -1,2 +1,9 @@
 <%= simple_format(@content.content) %>
 <%= render '/layouts/support.html.erb' %>
+
+
+<% content_for :rh do %>
+
+<%= image_tag 'headshot.jpg', class:"img-fluid"%>
+
+<% end %>

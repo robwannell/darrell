@@ -99,7 +99,7 @@
 
 <h2>Former Elected Officials</h2> 
 
-<% @stateelecteds.each do |e| %>
+<% @formerelecteds.each do |e| %>
 <p> <%= e.title %> <strong><%= e.firstname %> <%= e.lastname %></strong> <% if current_user %> 
 <span class="label label-warning"> <%= e.rank %></span>
 <span class="edit alert edit-endorsement" >
