@@ -1,32 +1,4 @@
-<%= content_for :jumbotron do %>
 
-<% if @news.avatar.blank? %>
-<div class="outerwrapper-news">
-	
-	
-<% else %>
-
-<div  style="background: url('<%= @news.avatar.url(:original) %>')center center   no-repeat;
-	background-size:cover; min-height:450px;padding: 00px 0 10px;
-	margin:0 0;">
-
-<% end%>
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-  
-   
-		   <div class="jumbotron" >
-      
-        <div class="lead jumbylead">
-			  <div class="container "><div class="jumboleader"><%= @news.title %></div></div>
-        
-      </div>
-    </div>
-
-</div>
-
-
-<% end %>
 
  	<% if current_user %>
  	<div class="edit alert" >
@@ -37,7 +9,20 @@
    </button>
    
  </div>
- <% end %>
+<% end %>
+ <% if @news.avatar.blank? %>
+ no image
+	
+	
+ <% else %>
+<div class="news-img">
+ <%= image_tag @news.avatar.url(:medium), class:"img-fluid"%>
+</div>
+ <% end%>
+ 
+<h1> <%= @news.title %></h1>
+ 
+ 
 
 <p class="lead">
 
