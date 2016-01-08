@@ -78,7 +78,7 @@
 <h2>Regional Elected Officials</h2> 
 
 <% @regelecteds.each do |e| %>
-<p> <%= e.title %> <%= e.firstname %> <%= e.lastname %> <% if current_user %> 
+<p> <%= e.title %> <strong><%= e.firstname %> <%= e.lastname %></strong> <% if current_user %> 
 <span class="label label-warning"> <%= e.rank %></span>
 <span class="edit alert edit-endorsement" >
 <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
@@ -88,7 +88,7 @@
 <h2>State Elected Officials</h2> 
 
 <% @stateelecteds.each do |e| %>
-<p> <%= e.title %> <%= e.firstname %> <%= e.lastname %> <% if current_user %> 
+<p> <%= e.title %> <strong><%= e.firstname %> <%= e.lastname %></strong> <% if current_user %> 
 <span class="label label-warning"> <%= e.rank %></span>
 <span class="edit alert edit-endorsement" >
 <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
@@ -100,7 +100,7 @@
 <h2>Former Elected Officials</h2> 
 
 <% @stateelecteds.each do |e| %>
-<p> <%= e.title %> <%= e.firstname %> <%= e.lastname %> <% if current_user %> 
+<p> <%= e.title %> <strong><%= e.firstname %> <%= e.lastname %></strong> <% if current_user %> 
 <span class="label label-warning"> <%= e.rank %></span>
 <span class="edit alert edit-endorsement" >
 <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
@@ -115,7 +115,7 @@
 
 <% @individuals.each do |e| %>
 
-<p>  <%= e.title %> <%= e.firstname %> <%= e.lastname %>  <% if current_user %>   <span class="edit alert edit-endorsement" >
+<p>  <%= e.title %> <strong><%= e.firstname %> <%= e.lastname %></strong>  <% if current_user %>   <span class="edit alert edit-endorsement" >
 <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
 </span></p></span>
 
