@@ -7,9 +7,12 @@ before_filter :authorize, except: [:index]
     @testamonies = Testamony.all
     @first = Testamony.first
     @endorsements = Endorsement.all
-    @electeds = Endorsement.where(category: 'Elected') 
+    @sacelecteds = Endorsement.where(category: 'Sac Elected') 
+    @regelecteds = Endorsement.where(category: 'Regional Elected')
+    @stateelecteds = Endorsement.where(category: 'State Elected')
+    @formerelecteds = Endorsement.where(category: 'Former Elected')
     @orgs = Endorsement.where(category: 'Organization')
-    @individuals = Endorsement.where(category: 'Individual')
+    @individuals = Endorsement.where(category: 'Community Leader')
   end
 
   # GET /endorsements/1

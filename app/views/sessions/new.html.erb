@@ -2,7 +2,7 @@
 	<div class="card login">
 	<h2>Login</h2>
 
-<%= form_tag '/login' do %>
+<%= bootstrap_form_for '/login' do |f| %>
  <fieldset class="form-group">
   Email:
   <div class="controls login-field">
@@ -16,9 +16,11 @@
 	 <div class="controls login-field">
   <%= password_field_tag :password %>
 </div>
-  
+  <p><p>
 	  <fieldset class="form-group">  
-		  <div class="login-button"><%= submit_tag "Submit" %>
+		  <div class="actions pull-right">
+		  <%= f.submit 'Submit', class: 'btn btn-primary btn-about pull-right'%>
+	  </div>
 </div>
 </fieldset>
 <% end %>

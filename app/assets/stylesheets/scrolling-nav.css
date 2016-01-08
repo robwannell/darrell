@@ -110,18 +110,46 @@ html {
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
 of those sections to manage the look and feel of the site. */
 
-.intro-section {
+.organizations-section {
     min-height: 100%;
     padding-top: 100px;
     text-align: center;
     background: #fff;
 }
-.about-section {
+
+.sacramento-elected-section {
     min-height: 100%;
     padding-top: 100px;
     text-align: center;
-    background: #eee;
+    background-color:#DBF3FD;
 }
+.regional-elected-section {
+    min-height: 100%;
+    padding-top: 100px;
+    text-align: center;
+    background: #fff;
+}
+
+.state-elected-section {
+    min-height: 100%;
+    padding-top: 100px;
+    text-align: center;
+    background-color:#DBF3FD;
+}
+
+.former-elected-section {
+    min-height: 100%;
+    padding-top: 100px;
+    text-align: center;
+    background: #fff;
+}
+.community-leaders-section {
+    min-height: 100%;
+    padding-top: 100px;
+    text-align: center;
+    background-color:#DBF3FD;
+}
+
 
 .clients-section {
     min-height: 100%;
@@ -131,12 +159,7 @@ of those sections to manage the look and feel of the site. */
 	
 }
 
-.services-section {
-    min-height: 100%;
-    padding-top: 100px;
-    text-align: center;
-    background: #fff;
-}
+
 
 .contact-section {
     min-height: 100%;

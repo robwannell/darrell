@@ -15,13 +15,13 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
   
-<!--  <script src="https://use.typekit.net/bzw4tbx.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
+ <script src="https://use.typekit.net/bzw4tbx.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>   <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body data-no-turbolink>
 
 <div class="headset">
 	<div class="container"><a class="navbar-brand" href="#"><%= image_tag 'logo.png',  class: "hidden-md-down"%></a>
@@ -32,7 +32,7 @@
 		
 	<!-- Begin MailChimp Signup Form -->
 	<div id="mc_embed_signup">
-	<form action="//amwconsulting.us7.list-manage.com/subscribe/post?u=0832e6996a7bec29607e7c290&amp;id=7fc28ddeb1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	<form action="//steinberg4sac.us12.list-manage.com/subscribe/post?u=0063416f03ea303e7a07706a3&amp;id=7d6c63fe18" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 	    <div id="mc_embed_signup_scroll">
 	
 	<div class="mc-field-group">
@@ -48,6 +48,13 @@
 	</div>
 </div>
 	<!--End mc_embed_signup-->
+	
+	
+
+
+	<!--End mc_embed_signup-->
+	
+	
 	
 	<div class="donate"><%= link_to 'DONATE', donate_path, class: "btn" %>
 	</div>
@@ -158,7 +165,7 @@
 <%= yield :band1 %>
 <%= yield :band2 %>
 <%= yield :band3 %>
-
+<%= render "layouts/newsband.html.erb" %>
 
 </div>
       <footer>
@@ -168,14 +175,14 @@
 			        <h3>Contact us</h3>
 					<p><strong>Steinberg for Sacramento Mayor</strong><br/>
 						1100 O Street, Suite 200<br/>
-						Sacramento, CA 95814</p>
-					<p><strong>Tel:</strong> 555-123-456<br/>
+						Sacramento, CA 95814<br/><br/>
+						<strong>Tel:</strong> 555-123-456<br/>
 					<strong>Fax:</strong> 555-123-678<br/>
 					
 
 						
 			      </div>
-			      <div class="col-sm-3 footer-col">
+			      <div class="col-sm-6 footer-col">
 			       <h3>Site map</h3>
 				   <ul>
 					   <li><%= link_to 'Home', root_url, class: 'nav-link' %></li>
@@ -186,23 +193,26 @@
 					  
 					   
 				   </ul>
-			      </div>
-				  
-			      <div class="col-sm-3 footer-col">
-			       <h3>&nbsp;</h3>
+				   
 				   <ul>
 					   
 					   <li><%= link_to 'Endorsements', endorsements_path, class: 'nav-link' %></li>
 					   <li><%= link_to 'Support', support_path, class: 'nav-link' %></li>
-					   <li><%= link_to 'Donate', donate_path, class: 'nav-link' %></li>
+					   
 					   <li><%= link_to 'Contact', contact_path, class: 'nav-link' %></li>
 					   
 				   </ul>
+				   
+			   	<div class="footer-donate"><%= link_to 'DONATE', donate_path, class: "btn" %>
+			   	</div>
 			      </div>
+				  
+			     
 				  
 				  
 			      <div class="col-sm-2 footer-col">
-			       <h3>Follow Darrell</h3>
+			       <h3>Social</h3>
+				   <p><%= link_to (image_tag 'twitter.png'), 'http://twitter.com/Steinberg4Sac', target: 'blank' %><%= link_to (image_tag 'fb.png'), 'http://facebook.com/Steinberg.Darrell', target: 'blank' %>
 			      </div>
 			      
 			    </div>
@@ -226,6 +236,17 @@
 		
 	</div>
       </footer>
+	  
+	 
+<!-- FB widget -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.5";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-568c52c5530166b6" async="async"></script>

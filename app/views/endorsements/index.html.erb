@@ -54,45 +54,78 @@
 	
 	<p class="lead">Join the growing group of Darrell supporters</p>
 	
-		 <h2>Public Officials</h2> 
-		  
-		<% @electeds.each do |e| %>
-		  
-		 <p> <%= e.title %> <%= e.firstname %> <%= e.lastname %> <% if current_user %> 
-			<span class="label label-warning"> <%= e.rank %></span>
-			  <span class="edit alert edit-endorsement" >
-				   <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
-		  </span>
-		  
-		  
-		 <% end %>
+<% unless @orgs.blank? %>
+<h2>Organizations</h2> <% end %>
+	<% @orgs.each do |e| %>
+	<p><%= e.organization %>  <% if current_user %>    <span class="edit alert edit-endorsement" >
+	   <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %></p>
+</span>
+<% end %></p>
+<% end %>
+	
+
+<h2>Sacramento Elected Officials</h2> 
+  
+<% @sacelecteds.each do |e| %>
+  
+ <p> <%= e.title %> <%= e.firstname %> <%= e.lastname %> <% if current_user %> 
+	<span class="label label-warning"> <%= e.rank %></span>
+	  <span class="edit alert edit-endorsement" >
+		   <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
+  </span>
+<% end %>
 		 
- 		 <% unless @orgs.blank? %><h2>Organizations</h2> <% end %>
-		  
- 		<% @orgs.each do |e| %>
-		  
- 		 <p><%= e.organization %>  <% if current_user %>    <span class="edit alert edit-endorsement" >
-				   <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %></p>
-		  </span>
-		  <% end %></p>
-		  
- 		 <% end %>
+<h2>Regional Elected Officials</h2> 
+
+<% @regelecteds.each do |e| %>
+<p> <%= e.title %> <%= e.firstname %> <%= e.lastname %> <% if current_user %> 
+<span class="label label-warning"> <%= e.rank %></span>
+<span class="edit alert edit-endorsement" >
+<%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
+</span>
+<% end %>		 
 		 
- 		 <h2>Individuals</h2> 
-		  
- 		<% @individuals.each do |e| %>
-		  
- 		 <p>  <%= e.title %> <%= e.firstname %> <%= e.lastname %>  <% if current_user %>   <span class="edit alert edit-endorsement" >
-				   <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
-		  </span></p></span>
-		  
- 		 <% end %>
+<h2>State Elected Officials</h2> 
+
+<% @stateelecteds.each do |e| %>
+<p> <%= e.title %> <%= e.firstname %> <%= e.lastname %> <% if current_user %> 
+<span class="label label-warning"> <%= e.rank %></span>
+<span class="edit alert edit-endorsement" >
+<%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
+</span>
+<% end %>	
+
+
+
+<h2>Former Elected Officials</h2> 
+
+<% @stateelecteds.each do |e| %>
+<p> <%= e.title %> <%= e.firstname %> <%= e.lastname %> <% if current_user %> 
+<span class="label label-warning"> <%= e.rank %></span>
+<span class="edit alert edit-endorsement" >
+<%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
+</span>
+<% end %>	
+
+
+
+		 
+		 
+<h2>Community Leaders</h2> 
+
+<% @individuals.each do |e| %>
+
+<p>  <%= e.title %> <%= e.firstname %> <%= e.lastname %>  <% if current_user %>   <span class="edit alert edit-endorsement" >
+<%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
+</span></p></span>
+
+<% end %>
 		
 		
 		
 	
 		
-		<p class="bttop"><%= link_to '<span class="glyphicon-class glyphicon glyphicon-chevron-up"></span> Back to top'.html_safe, '#Top' %></p>
+		<p>	<a href="#" class="crunchify-top">↑Back to top</a>
 		
 		
 		<%= content_for :rh do %>
@@ -114,13 +147,42 @@
 		 		   </button>
    
 		 		 </div>
+				 
+				 <% else %>
+				 
+				 <%= render '/layouts/social.html.erb' %>
 		 <% end %>
 		 
 		
 		<% end %>
+		
+		
+		
 		
 		<script>
 		$('.carousel').carousel({
 		   interval: 6000
 		   })
 		</script>
+		   
+		   
+		   <script>            
+		   	jQuery(document).ready(function() {
+		   		var offset = 220;
+		   		var duration = 500;
+		   		jQuery(window).scroll(function() {
+		   			if (jQuery(this).scrollTop() > offset) {
+		   				jQuery('.crunchify-top').fadeIn(duration);
+		   			} else {
+		   				jQuery('.crunchify-top').fadeOut(duration);
+		   			}
+		   		});
+ 
+		   		jQuery('.crunchify-top').click(function(event) {
+		   			event.preventDefault();
+		   			jQuery('html, body').animate({scrollTop: 0}, duration);
+		   			return false;
+		   		})
+		   	});
+		   </script>
+		   

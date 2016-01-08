@@ -7,7 +7,7 @@
 		   <div class="jumbotron jumby ">
       
         <div class="lead jumbylead">
-			  <div class="container "><div class="jumboleader">A mayor with a vision for Sacramento</div></div>
+			  <div class="container "><div class="jumboleader">A Mayor for all of us</div></div>
         
       </div>
     </div>
@@ -21,14 +21,23 @@
 
 <%= simple_format(@content.content) %>
 
-
+<div class="sig">
 <%= image_tag 'sig.jpg'%>
+</div>
+<div>
+	
+	
+	
+</div>
 
 
 <%= content_for :rh do %>
 
-<a class="twitter-timeline" href="https://twitter.com/Steinberg4Sac" data-widget-id="685174661567483904">Tweets by @Steinberg4Sac</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
+
+
+
+<%= render '/layouts/social.html.erb' %>
 
 
 <% end %>
