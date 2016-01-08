@@ -227,7 +227,7 @@
 		<div class="paidforby">Paid for by Steinberg for Sacramento Mayor 2016</div>
 		<p>
 			<% if current_user %>
-			  Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %> | <%= link_to 'Admin', admin_path %> <% if current_user.id == 1 %> || <%= link_to 'Add User', '/signup' %><% end %>
+			  Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %> | <%= link_to 'Admin', admin_path %> <% if current_user.id == 1 %> || <%= link_to 'Add User', signup_path %><% end %>
 			<% else %>
 			  <%= link_to 'Login', '/login' %> 
 			<% end %>
