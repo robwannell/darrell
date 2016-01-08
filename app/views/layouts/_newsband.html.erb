@@ -2,10 +2,22 @@
 	<div class="container">
 		<div class="row">
 		  <div class="col-md-8"><span class="header">News/Views </span>
-			  <h4 class="newslink"><%= link_to @newsband.title, @newsband %></h4><p class="lead"><%= @newsband.description %> <span class="read-more newslink "><%= link_to '...READ MORE', @newsband %><i class="fa fa-share fa-read-more"></i> | <%= link_to 'All News', news_index_path%></span></div>
+			  <% unless @newsband.blank? %>
+			  
+			  <h4 class="newslink"><%= link_to @newsband.title, @newsband %></h4><p class="lead"><%= @newsband.description %> <span class="read-more newslink "><%= link_to '...READ MORE', @newsband %><i class="fa fa-share fa-read-more"></i> | <%= link_to 'All News', news_index_path%></span>
+			  
+				  <% end %></div>
 				  
 				  
-		  <div class="col-md-4"><span class="header">Upcoming Events</span><h4 class="newslink"><%= link_to @eventband.name, @eventband %></h4><p><%= @eventband.start_time.strftime("%B %d - %l:%M %p") %> <span class="read-more newslink "><%= link_to '...MORE INFO', @eventband %><i class="fa fa-share fa-read-more"></i></span></div>
+		  <div class="col-md-4"><span class="header">Upcoming Events</span>
+			  
+			  <% unless @eventband.blank? %>
+			  
+			  <h4 class="newslink"><%= link_to @eventband.name, @eventband %></h4><p><%= @eventband.start_time.strftime("%B %d - %l:%M %p") %> <span class="read-more newslink "><%= link_to '...MORE INFO', @eventband %><i class="fa fa-share fa-read-more"></i></span><% end %>
+			  
+			  </div>
+			  
+			  
 		</div>
 	
 	</div>
