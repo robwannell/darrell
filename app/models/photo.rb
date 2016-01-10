@@ -6,7 +6,7 @@ class Photo < ActiveRecord::Base
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
   validates :avatar, presence: true
    
-   
+   validates_attachment_size :avatar, :less_than => 6.megabytes
   
   
    default_scope  {order 'created_at DESC'}
