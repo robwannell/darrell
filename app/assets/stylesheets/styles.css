@@ -870,6 +870,7 @@ input.choose-image {
 	 margin:20px 0;
  }
  .testamony-quote {
+	 padding:50px 50px 0 ;
 	 font-size: 1.8em;
 	 font-family: "clavo", serif;
  }
@@ -893,22 +894,51 @@ input.choose-image {
 	 font-size: 0.8em;
  }
  
- .carousel {
-	 padding:20px 0;
-	 background-color:#F3F3F3;
-	 margin:0 0 50px 0;
-	 min-height:350px;
- }
- .carousel-control.left, .carousel-control.right {
-     background-image: none;
-	 display: none;
+ .carousel{
+	 text-align:center;
+	 padding:00px 0 0;
+	
  }
  
-.carousel-indicators a{
-	
-	color:red;
-	padding-top:50px;
-}
+ .carousel-inner {
+	 
+	 padding:0px 0;
+	 background-color:#efefef;
+	 margin:20px 0 50px 0;
+	 min-height:350px;
+ }
+ 
+ .carousel-indicators li {
+     display: inline-block;
+     width: 10px;
+     height: 10px;
+     margin: 5px;
+     text-indent: 0;
+     cursor: pointer;
+     border: none;
+     border-radius: 50%;
+     background-color: #efefef;
+	 border: 1px solid #FDAA4B;
+         
+ }
+ .carousel-indicators .active {
+     width: 10px;
+     height: 10px;
+     margin: 5px;
+     background-color: #FDAA4B;
+     border: none;
+     border-radius: 50%;
+     box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.3);
+ }
+ 
+ .carousel-control.left, .carousel-control.right {
+     background-image: none;
+	 color:#333;
+	 bottom:-250px;
+	 
+ }
+ 
+
 
 .receptionist {
 	background-color:#efefee;
@@ -964,4 +994,20 @@ input.choose-image {
 	color:#153C5B;
 	font-weight:300;
 	font-size:1.3em;
+}
+
+.low-q {
+	text-align:center;
+	margin: 20px 0;
+	padding:20px;
+	background-color:#efefef;
+}
+
+.low-q img {
+	border:5px solid #fff;
+}
+
+.low-q p {
+	font-weight:350;
+	margin:10px 0;
 }

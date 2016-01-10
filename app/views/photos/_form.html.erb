@@ -1,0 +1,26 @@
+<%= bootstrap_form_for(@photo) do |f| %>
+  
+
+  <div class="field">
+ 
+    <%= f.text_field :title %>
+  </div>
+  
+  <div class="field">
+   
+   
+	
+  	  <% unless @photo.avatar.blank? %>
+  	  <p><b>Current image</b><br/><%= link_to (image_tag @photo.avatar.url(:thumb)), @photo.avatar.url(:original), target: '_blank' %> </p><%= f.file_field :avatar, label: 'Add a new image', class: 'choose-image'%></p>
+  	  <% else %>
+  	  <div class="field">
+  	  <%= f.file_field :avatar, label: 'Add an image for this download - ', class: 'choose-image'%>
+    </div>
+  	  <% end %>
+	  
+  </div>
+  
+  <div class="actions pull-right">
+    <%= f.submit %>
+  </div>
+<% end %>

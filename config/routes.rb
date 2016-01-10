@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
  
+  resources :photos
   get 'donate', to: 'donate#index'
 
   resources :mail_recipients

@@ -3,40 +3,32 @@
 
 <div class="testamonies">
 
-
-<div  class="carousel slide" data-ride="carousel" data-pause="false">
- 
-  
-  
-  
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+	 
+	  <% @testamonies.each_with_index do |t,i| %>
+    <li data-target="#carousel-example-generic" data-slide-to="<%= i %>" class="discy <% if t == @first %>active<% end %>"></li>
+    <% end %>
+  </ol>
   <div class="carousel-inner" role="listbox">
-	  
 	   <% @testamonies.each do |testamony| %>
-	   <div class="carousel-item  <% if testamony == @first %>active<% end %>">
-		   
-		 <div class="testamony">
-		 <div class="testamony-quote">
-	
-		 	<i><span class="fa fa-quote-left quote"></span> </i> <%= testamony.quote %> <i><span class="fa fa-quote-right quote"></span> </i></div>
-		 
-		 <div class="testamony-name"><%= testamony.name %></div>
-		 
-		 <div class="testamony-title"><%= testamony.title %></div>
-
-
-
-
-
-	
-		     
-
-
-		 </div>
-		   
-		   </div>
-	   <% end %>
-    
+	   
+    <div class="carousel-item <% if testamony == @first %>active<% end %>">
+		<div class="testamony-quote">
+      <i><span class="fa fa-quote-left quote"></span> </i> <%= testamony.quote %> <i><span class="fa fa-quote-right quote"></span> </i>
+	  
   </div>
+  
+ <div class="testamony-name"><%= testamony.name %></div>
+ 
+ <div class="testamony-title"><%= testamony.title %></div>
+ 
+	    </div>
+	  <% end %>
+  
+	
+	
+</div>
   <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
     <span class="icon-prev" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
@@ -45,11 +37,15 @@
     <span class="icon-next" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+  
+  </div>
+  
 </div>
-</div>
-		
+
 <% end %>
-		
+	
+	
+	
 	<h1>Endorsements for Darrell</h1>
 	
 	<p class="lead">Join the growing group of Darrell supporters</p>
@@ -57,7 +53,7 @@
 <% unless @orgs.blank? %>
 <h2>Organizations</h2> <% end %>
 	<% @orgs.each do |e| %>
-	<p><%= e.organization %>  <% if current_user %>    <span class="edit alert edit-endorsement" >
+	<p><%= e.organization %>  <span class="label label-warning"> <%= e.rank %></span><% if current_user %>    <span class="edit alert edit-endorsement" >
 	   <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %></p>
 </span>
 <% end %></p>
@@ -68,7 +64,7 @@
   
 <% @sacelecteds.each do |e| %>
   
- <p> <%= e.title %> <strong><%= e.firstname %> <%= e.lastname %></strong> <% if current_user %> 
+ <p><strong><%= e.firstname %> <%= e.lastname %></strong>  <%= e.title %> <% if current_user %> 
 	<span class="label label-warning"> <%= e.rank %></span>
 	  <span class="edit alert edit-endorsement" >
 		   <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
@@ -78,7 +74,7 @@
 <h2>Regional Elected Officials</h2> 
 
 <% @regelecteds.each do |e| %>
-<p> <%= e.title %> <strong><%= e.firstname %> <%= e.lastname %></strong> <% if current_user %> 
+<p><strong><%= e.firstname %> <%= e.lastname %></strong>  <%= e.title %> <% if current_user %> 
 <span class="label label-warning"> <%= e.rank %></span>
 <span class="edit alert edit-endorsement" >
 <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
@@ -100,7 +96,7 @@
 <h2>Former Elected Officials</h2> 
 
 <% @formerelecteds.each do |e| %>
-<p> <%= e.title %> <strong><%= e.firstname %> <%= e.lastname %></strong> <% if current_user %> 
+<p> <strong><%= e.firstname %> <%= e.lastname %></strong> <%= e.title %> <% if current_user %> 
 <span class="label label-warning"> <%= e.rank %></span>
 <span class="edit alert edit-endorsement" >
 <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
@@ -115,7 +111,7 @@
 
 <% @individuals.each do |e| %>
 
-<p>  <%= e.title %> <strong><%= e.firstname %> <%= e.lastname %></strong>  <% if current_user %>   <span class="edit alert edit-endorsement" >
+<p><strong><%= e.firstname %> <%= e.lastname %></strong>   <%= e.title %>  <% if current_user %>   <span class="edit alert edit-endorsement" >
 <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
 </span></p></span>
 
@@ -165,6 +161,8 @@
 		$('.carousel').carousel({
 		   interval: 6000
 		   })
+		   
+		  
 		</script>
 		   
 		   
