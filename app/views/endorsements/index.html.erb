@@ -53,7 +53,7 @@
 <% unless @orgs.blank? %>
 <h2>Organizations</h2> <% end %>
 	<% @orgs.each do |e| %>
-	<p><%= e.organization %>  <span class="label label-warning"> <%= e.rank %></span><% if current_user %>    <span class="edit alert edit-endorsement" >
+	<p><%= e.organization %>  <% if current_user %> <span class="label label-warning"> <%= e.rank %></span>   <span class="edit alert edit-endorsement" >
 	   <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %></p>
 </span>
 <% end %></p>
