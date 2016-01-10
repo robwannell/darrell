@@ -28,9 +28,11 @@
 
 <div class="personal-references">
 	<h2>Personal References for Darrell</h2>
+	<% unless @personal.blank? %>
 	<% @personal.each do |p|%>
 	<h3><%= link_to p.name, p  %></h3>
 	<p class="lead"><%= p.description %><span class="read-more  "><%= link_to '...read more', p %></span> <span class="readmore-sep">| </span><span class="read-more  "><%= link_to 'All Personal References', darrell_personalreferences_path, class: "read-more-blue newslink "%></span></p>
+	<% end %>
 	<% end %>
 	
 </div>
