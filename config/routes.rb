@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
  
+  resources :personals
   resources :photos
   get 'donate', to: 'donate#index'
 
@@ -10,7 +11,8 @@ Rails.application.routes.draw do
   resources :news
   resources :issues
   get 'darrell/about', to: 'darrell#about'
-
+  
+  get 'darrell/personalreferences', to: 'darrell#personalreferences'
   get 'darrell/issues', to: 'darrell#issues'
   
   resources :contact, only: [:new, :create]

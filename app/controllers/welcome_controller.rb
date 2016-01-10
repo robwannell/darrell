@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
   def index
     @content = Page.find(1)
-    @testamonies = Testamony.all
+    @personal = Personal.order("RAND()").limit(2)
     @first = Testamony.first
   end
 end

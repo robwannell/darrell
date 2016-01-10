@@ -24,50 +24,18 @@
 <div class="sig">
 <%= image_tag 'sig.jpg'%>
 </div>
-<div>
-	
-<div class="testamonies">
 
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-	 
-	  <% @testamonies.each_with_index do |t,i| %>
-    <li data-target="#carousel-example-generic" data-slide-to="<%= i %>" class="discy <% if t == @first %>active<% end %>"></li>
-    <% end %>
-  </ol>
-  <div class="carousel-inner" role="listbox">
-	   <% @testamonies.each do |testamony| %>
-	   
-    <div class="carousel-item <% if testamony == @first %>active<% end %>">
-		<div class="testamony-quote">
-      <i><span class="fa fa-quote-left quote"></span> </i> <%= testamony.quote %> <i><span class="fa fa-quote-right quote"></span> </i>
-	  
-  </div>
-  
- <div class="testamony-name"><%= testamony.name %></div>
- 
- <div class="testamony-title"><%= testamony.title %></div>
- 
-	    </div>
-	  <% end %>
-  
-	
+
+<div class="personal-references">
+	<h2>Personal References for Darrell</h2>
+	<% @personal.each do |p|%>
+	<h3><%= link_to p.name, p  %></h3>
+	<p class="lead"><%= p.description %><span class="read-more  "><%= link_to '...read more', p %></span> <span class="readmore-sep">| </span><span class="read-more  "><%= link_to 'All Personal References', darrell_personalreferences_path, class: "read-more-blue newslink "%></span></p>
+	<% end %>
 	
 </div>
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="icon-prev" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="icon-next" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  
-  </div>
-  
-</div>	
 	
-</div>
+
 
 
 

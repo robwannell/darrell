@@ -7,6 +7,14 @@ class DarrellController < ApplicationController
     @issues = Issue.friendly.all
   end
   
+  def personalreferences
+    @personals = Personal.paginate(:page => params[:page], :per_page => 5).order('created_at DESC')
+  end
+  
+  def reference
+    @reference = Personal.find(params[:id])
+  end
+  
   def support
     @content = Page.find(3)
     @support = Support.new
