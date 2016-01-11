@@ -1042,7 +1042,13 @@ input.choose-image {
 	font-weight:350;
 	margin:10px 0;
 }
+.reference {
+	padding:15px;
+}
 
+.personal-references .lead {
+	font-size:1.1em;
+}
 .personal-references h2 {
 	padding:15px;
 	background-color:#efefef;
@@ -1060,3 +1066,4 @@ input.choose-image {
 .personal-references img {
 	padding:10px 20px 20px;
 }
+
