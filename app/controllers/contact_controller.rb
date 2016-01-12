@@ -15,6 +15,5 @@ class ContactController < ApplicationController
         render :new
       end
     end
-    
      
 end
