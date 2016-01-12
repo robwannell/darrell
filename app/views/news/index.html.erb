@@ -20,7 +20,7 @@
 
 
     <% @news.each do |news| %>
- <div class="row">
+ <div class="row news-index">
      <div class="col-md-3 news-img"> <%= image_tag news.avatar.url(:thumb)%>  </div> 
       <div class="col-md-9 news-teaser"><h3>  <%= news.title %> </h3>
 		 <small class="text-muted"><%= news.updated_at.strftime("%B %d %Y")%></small> 

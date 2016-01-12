@@ -693,14 +693,18 @@ input.choose-image {
 	padding:10px 20px;
 }
 
+.news-index {
+	margin-bottom:30px;
+}
 .news-teaser h3 {
 	font-size:1.5em;
 	font-weight:400;
 	margin-bottom:0;
+	padding-top:0;
 }
 .news-teaser {
 	font-weight:300;
-	padding:10px 0px 0 20px;
+	padding:0px 0px 0 20px;
 }
 
 .newslink {
