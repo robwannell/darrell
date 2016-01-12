@@ -870,6 +870,11 @@ input.choose-image {
 	 
  }
  
+ .event-location {
+	 font-size:0.9em;
+	 font-weight:normal;
+ }
+ 
  .event-details h2,h3{
  }
  

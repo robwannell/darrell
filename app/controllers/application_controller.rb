@@ -7,7 +7,8 @@ class ApplicationController < ActionController::Base
   
   def grab_news
     @newsband = News.first
-    @eventband = Event.first
+    @eventband = Event.where('start_time >= ?', Date.today).order("start_time ASC").first
+  
   end
   
   

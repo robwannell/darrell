@@ -6,7 +6,7 @@ class Event < ActiveRecord::Base
     extend FriendlyId
     friendly_id :name, use: :slugged
     
-     default_scope  {order 'created_at DESC'}
+     default_scope  {order 'start_time ASC'}
      
      
     
