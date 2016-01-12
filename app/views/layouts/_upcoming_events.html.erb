@@ -16,7 +16,7 @@
 	<% unless @futureevents.blank? %>
      <div class="eventlist">
         <h4><%= link_to event.name, event  %></h4>
-        <h5><%= event.start_time.strftime("%A %B %d - %I:%M %p") %></h5>
+        <h5><%= event.start_time.strftime("%A %B %d - %l:%M %p") %></h5>
         <p class="event-location"><%= event.location %><br/><%= link_to 'More details', event%>
         
 		
