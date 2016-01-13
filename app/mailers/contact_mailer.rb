@@ -13,3 +13,5 @@ class ContactMailer < ActionMailer::Base
         mail(subject: 'Contact message', reply_to: email)
     end
 end
+
+
