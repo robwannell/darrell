@@ -441,9 +441,9 @@ footer {
 
 .donate-form {
 	width:100%;
-	height:500px;
-	 background-color:#F3F3F3;
-	 padding:100px 20px;
+	border:10px #f8f8f8 solid;
+	 background-color:#fff;
+	 padding:20px;
 	 margin-bottom:30px;
 	 text-align:center;
 }
