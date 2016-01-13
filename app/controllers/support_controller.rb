@@ -3,7 +3,7 @@ class SupportController < ApplicationController
     @support = Support.new
     
     
-    @help = ['Add my name as an endorser', 'Host a "Meet-&-Greet" for Darrell', 'Make phone calls for Darrell','Walk precincts with Darrell', 'Display and/or deliver a lawn sign for Darrell', 'Help Get-Out-the-Vote']
+    @help = ['Add my name as an endorser', 'Host a "Meet-&-Greet" for Darrell', 'Make phone calls for Darrell','Walk precincts with Darrell', 'Display and/or deliver a lawn sign for Darrell', 'Help Get-Out-the-Vote', 'Share a personal story about why I\'m voting for Darrell', 'Be a precinct captain for my neighborhood', 'Join the ironing board brigade to table in public places', 'Donate my skills another way (use comment box)']
   end
   
 
@@ -21,7 +21,7 @@ class SupportController < ApplicationController
       
       redirect_to root_path, notice: 'Thank you - your message has been sent!'
     else
-      @help = ['Add my name as an endorser', 'Host a "Meet-&-Greet" for Darrell', 'Make phone calls for Darrell','Walk precincts with Darrell', 'Display and/or deliver a lawn sign for Darrell', 'Help Get-Out-the-Vote']
+      @help = ['Add my name as an endorser', 'Host a "Meet-&-Greet" for Darrell', 'Make phone calls for Darrell','Walk precincts with Darrell', 'Display and/or deliver a lawn sign for Darrell', 'Help Get-Out-the-Vote', 'Share a personal story about why I\'m voting for Darrell', 'Be a precinct captain for my neighborhood', 'Join the ironing board brigade to table in public places', 'Donate my skills another way (use comment box)']
       render :new
     end
   end
