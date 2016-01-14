@@ -104,10 +104,9 @@
 <% end %>	
 
 
-
-<% if current_user %>		 
+	 
 		 
-<h2>Community Leaders - Hidden From Public View</h2> 
+<h2>Community Leaders</h2> 
 
 <% @individuals.each do |e| %>
 
@@ -115,7 +114,7 @@
 <%= link_to ' edit', edit_endorsement_path(e), class: "admin-edit fa fa-edit" %> |  <%= link_to ' delete', endorsement_path(e), class: "admin-edit fa fa-trash", :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
 </span></p></span>
 
-<% end %>
+
 		
 	<% end %>	
 		
