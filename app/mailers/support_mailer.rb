@@ -1,9 +1,9 @@
 class SupportMailer < ActionMailer::Base
   default from: 'notifier@steinberg4sac.com'
-  @recip = MailRecipient.find(1)
-  default to: @recip.email
+  
+  
     
-    def support_email(name, email, phone, address, body, help)
+    def support_email(name, email, phone, address, body, help, recip)
         @name = name
         @email = email
         @phone = phone
@@ -11,6 +11,6 @@ class SupportMailer < ActionMailer::Base
         @body = body
         @help = help
 
-        mail(from: email, subject: 'Support request', reply_to: email)
+        mail(from: email, subject: 'Support request', reply_to: email, to: recip)
     end
 end

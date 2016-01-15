@@ -9,15 +9,17 @@ class SupportController < ApplicationController
 
   def create
     @support = Support.new(params[:support])
+    @recip = MailRecipient.find(1)
     name = @support.name
     email = @support.email
     phone = @support.phone
     address = @support.address
     body = @support.comments
     @help = params[:help]
+    recip = @recip.email
     
     if @support.valid?
-      SupportMailer.support_email(name, email, phone, address, body, @help).deliver
+      SupportMailer.support_email(name, email, phone, address, body, @help, recip).deliver
       
       redirect_to root_path, notice: 'Thank you - your message has been sent!'
     else
