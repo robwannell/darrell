@@ -1,38 +1,62 @@
 
 
-<h1>Admin#index</h1>
+<h1>Admin Center</h1>
 <p class="lead">This is the Admin hub from where you can manage the website. Only registered admins can see this area.</p>
+<h3>Admin Users</h3>
+<p>The following are registered Admin users for the website. Contact Rob if you need to add (or change the details/permissions of) administrators.</p>
+	<p>
+	<% @admin.each do |a|%>
+	
+	<strong><%= a.name.capitalize %></strong> - <%= mail_to a.email %><br/>
+	
+	<% end %>
 
+<div class="admin-panel">	
 <h3>Issues</h3>
 <p>Add and manage the hot button topics here. Add an image, a leader, and  content for each, and build out the panels in the Issues section. Currently hidden from public viewing.</p>
 
 <p><%= link_to 'Manage Issues', issues_path, class: "btn btn-primary" %> 
-	
+</div>
+<div class="admin-panel">	
 <h3>News</h3>
-<p>Got news? Add it here</p>
+<p>Got news?</p>
 <p><%= link_to 'Add a Story', new_news_path, class: "btn btn-primary" %>
+</div>
 	
+<div class="admin-panel">	
+<h3>Endorsement</h3>
+<p>Add and manage the endorsements here.</p>
+<p><%= link_to 'Add a Story', new_news_path, class: "btn btn-primary" %>
+</div>
+		
+		
+	<div class="admin-panel">
 <h3>Upload Hi Q Media</h3>
 <p>Use this section to add hi quality images of Darrell for use by outside agencies, new, IEs etc.. Max file size is 6MB, so make sure the file conforms to this limit. Use Photoshop, etc to reduce the filesize if needed.</p> 
 <p><%= link_to 'Manage Media Hi-Q images', photos_path, class: "btn btn-primary" %>
-	
+</div>
+<div class="admin-panel">	
 	
 <h3>Testimonies</h3>
 <p>The sliding quotes are managed here. </p>
 
 <p><%= link_to 'Manage Testamonies', testamonies_path, class: "btn btn-primary" %> 
-	
+</div>
+<div class="admin-panel">	
 <h3>Personal References</h3>
 <p>The little stories of support can be added here. Supports an image, but not required.</p>
 	
 <p><%= link_to 'Manage Personal References', darrell_personalreferences_path, class: "btn btn-primary" %> 
 
-
+</div>
+<div class="admin-panel">
 <h3>Mailer Recipients</h3>
 <p>Control who receives the messages from the Support form (temporary) and the website Contact form</p>
 <p><%= link_to 'Manage Mailer Recipients', mail_recipients_path, class: "btn btn-primary" %> 
 
-
+</div>
+<div class="admin-panel">
 <h3>Pages</h3>
 <p>The content on the welcome page and the About Darrell page is editable by admin. Use this section to make changes. Adding pages will have no effect, and changing the page ttle could cause problems. Only use this section if you know what you are doing!</p>
 <p><%= link_to 'Manage Pages', pages_path, class: "btn btn-primary" %> 
+</div>

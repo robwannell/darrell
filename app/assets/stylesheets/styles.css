@@ -1077,3 +1077,12 @@ input.choose-image {
 	padding:10px 20px 20px;
 }
 
+.admin-panel {
+	background-color:#f8f8f8;
+	padding:20px;
+	margin:10px 0;
+}
+
+.admin-panel button {
+	text-align:right;
+}
