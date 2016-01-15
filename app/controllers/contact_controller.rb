@@ -9,6 +9,7 @@ class ContactController < ApplicationController
       name = @contact.name
       email = @contact.email
       body = @contact.body
+      recip = @recip.email
       if @contact.valid?
         ContactMailer.contact_email(name, email, body, recip).deliver
         redirect_to root_path, notice: 'Thank you - your message has been sent!'
