@@ -1,0 +1,33 @@
+<table class="table table-bordered table-striped" id="sortable">
+  <thead>
+    <tr>
+      <th>
+        Name
+      </th>
+      <th>
+        Leader
+      </th>
+      <th>
+        Action
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @personals.each do |personal| %>
+      <tr data-item-id=<%= "#{personal.id}" %> class="item">
+       
+        
+		
+		<td>
+          <%= personal.name %>
+        </td>
+        <td>
+          <%= personal.description %>
+        </td>
+        <td>
+          <%= link_to 'Show', personal %><%= link_to 'Edit', edit_personal_path(personal) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

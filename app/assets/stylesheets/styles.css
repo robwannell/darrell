@@ -1066,6 +1066,7 @@ input.choose-image {
 	font-size:1.3em;
 	margin:20px 0;
 	color:#666;
+	font-weight:300;
 }
 
 .personal-references h3 a{
@@ -1085,4 +1086,8 @@ input.choose-image {
 
 .admin-panel button {
 	text-align:right;
+}
+
+.ref-table td{
+	border:none;
 }

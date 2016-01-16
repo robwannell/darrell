@@ -10,6 +10,12 @@ Rails.application.routes.draw do
   resources :events
   resources :news
   resources :issues
+  
+  resources :personals do
+    post :update_row_order, on: :collection
+  end
+  
+  
   get 'darrell/about', to: 'darrell#about'
   
   get 'darrell/personalreferences', to: 'darrell#personalreferences'

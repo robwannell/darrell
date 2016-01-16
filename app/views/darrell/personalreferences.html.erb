@@ -1,6 +1,11 @@
+
+
+
 <h1>Personal References for Darrell</h1>
+<table class="table  table-striped ref-table" <% if current_user %>id="sortable"<% end %>>
 
     <% @personals.each do |personal| %>
+	<tr data-item-id=<%= "#{personal.id}" %> class="item"><td>
 	<div class="personal">
     <h2><%= link_to personal.name, personal %></h2>
 	<h5><%= personal.title %></h5>
@@ -9,15 +14,13 @@
 	
 	
 </div>
-
-	<div class="pagination">
-  <%= will_paginate @personals %>
-</div>
+</td></tr>
+	
 
 
     <% end %>
 	
-	
+</tr></table>
 	
 <% content_for :rh do %>
 <% if current_user %><div class="edit alert" >

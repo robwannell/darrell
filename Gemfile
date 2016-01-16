@@ -28,6 +28,9 @@ gem "paperclip", "~> 4.3"
 gem 'friendly_id', '~> 5.1.0'
 
 gem 'will_paginate', '~> 3.0.6'
+gem 'ranked-model'
+gem 'jquery-ui-rails'
+
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'

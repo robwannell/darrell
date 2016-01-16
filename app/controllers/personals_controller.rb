@@ -4,8 +4,19 @@ class PersonalsController < ApplicationController
   # GET /personals
   # GET /personals.json
   def index
-    @personals = Personal.all
+    @personals = Personal.rank(:row_order).all
+    
   end
+  
+  def update_row_order
+    @personal = Personal.find(personal_params[:personal_id])
+    @personal.row_order_position = personal_params[:row_order_position]
+    @personal.save
+
+    render nothing: true # this is a POST action, updates sent via AJAX, no view rendered
+  end
+
+  
 
   # GET /personals/1
   # GET /personals/1.json
@@ -29,7 +40,7 @@ class PersonalsController < ApplicationController
 
     respond_to do |format|
       if @personal.save
-        format.html { redirect_to darrell_personalreferences_url, notice: 'Personal was successfully created.' }
+        format.html { redirect_to personals_url, notice: 'Personal was successfully created.' }
         format.json { render :show, status: :created, location: @personal }
       else
         format.html { render :new }
@@ -43,7 +54,7 @@ class PersonalsController < ApplicationController
   def update
     respond_to do |format|
       if @personal.update(personal_params)
-        format.html { redirect_to darrell_personalreferences_url, notice: 'Personal was successfully updated.' }
+        format.html { redirect_to personals_url, notice: 'Personal was successfully updated.' }
         format.json { render :show, status: :ok, location: @personal }
       else
         format.html { render :edit }
@@ -57,7 +68,7 @@ class PersonalsController < ApplicationController
   def destroy
     @personal.destroy
     respond_to do |format|
-      format.html { redirect_to darrell_personalreferences_url, notice: 'Personal was successfully destroyed.' }
+      format.html { redirect_to personals_url, notice: 'Personal was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -70,6 +81,6 @@ class PersonalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def personal_params
-      params.require(:personal).permit(:title, :name, :position, :content, :description, :avatar)
+      params.require(:personal).permit(:personal_id, :title, :name, :position, :content, :description, :avatar, :row_order_position)
     end
 end
