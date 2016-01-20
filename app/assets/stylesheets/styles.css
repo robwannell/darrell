@@ -1091,3 +1091,23 @@ input.choose-image {
 .ref-table td{
 	border:none;
 }
+
+.asterisk {
+	
+	color:#C80506;
+}
+.mc-ul h5 {
+	padding:20px 0;
+}
+.mc-ul li{
+	list-style:none;
+}
+
+.mc-ul input {
+	margin-right:10px;
+}
+
+.support-comments {
+	height:200px;
+	padding-top:5px;
+}
