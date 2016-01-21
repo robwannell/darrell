@@ -11,7 +11,7 @@ class NewsController < ApplicationController
   # GET /news/1.json
   def show
     
-    @stories = News.all
+    @stories = News.first(8)
   end
 
   # GET /news/new

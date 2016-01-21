@@ -22,7 +22,7 @@
  
 <h1> <%= @news.title %></h1>
  
- 
+ <h6 class="text-muted"><%= @news.updated_at.strftime("%B %d %Y")%></h6> 
 
 <p class="lead">
 
@@ -53,18 +53,17 @@
  </div>
  <% end %>
  
- 
-<% @stories.each do |i| %>
- <% unless i == @news %>
-<div class="card issue-card-sml">
-	
-	
-		<%= image_tag i.avatar.url(:thumb), class: "card-img-top issue-img-sml"%>
-		<div class="card-block no-padding">
-<h5 class="card-title"><%= link_to i.title, i %></h5>
 
- <p><%= link_to 'Read more', i %></p>
-</div>
-</div>
+<% @stories.each do |i| %>
+
+ <% unless i == @news %>
+
+	 <div class="news-card">
+	<% unless i.avatar.blank? %>
+		<%= image_tag i.avatar.url(:thumb), class: "img-fluid"%><% end %>
+
+<h5><%= link_to i.title, i %></h5>
+<h6 class="text-muted"><%= i.updated_at.strftime("%B %d %Y")%></h6> 
+ </div>
 <% end %>
 <% end %><% end %>

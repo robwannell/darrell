@@ -686,8 +686,14 @@ input.choose-image {
 	min-height:300px;
 }
 
-
-
+.news-card {
+	padding:10px;
+	border-bottom:1px solid #eee;
+	
+}
+.news-card h5 {
+	margin:10px 0;
+}
 .news-img {
 	padding:10px 20px;
 }
