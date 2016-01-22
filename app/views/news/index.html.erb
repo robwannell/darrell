@@ -23,7 +23,7 @@
  <div class="row news-index">
      <div class="col-md-3 news-img"> <%= image_tag news.avatar.url(:thumb)%>  </div> 
       <div class="col-md-9 news-teaser"><h3>  <%= link_to news.title, news %> </h3>
-		 <small class="text-muted"><%= news.updated_at.strftime("%B %d %Y")%></small> 
+		 <small class="text-muted"><% unless news.published_at.blank? %><%= news.published_at.strftime("%B %d %Y")%><% end %></small> 
     <p><%= news.description %> <small><%=     
     link_to "read more", news 
  %></small><br/>

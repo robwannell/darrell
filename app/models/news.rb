@@ -5,6 +5,6 @@ class News < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
   
-   default_scope  {order 'created_at DESC'}
+   default_scope  {order 'published_at DESC'}
   
 end
