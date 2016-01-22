@@ -4,6 +4,8 @@
    
     <%= f.text_field :title %>
 	
+	<%= f.datetime_select :published_at %>
+	
   	  <% unless @news.avatar.blank? %>
   	  <p><b>Current image</b><br/><%= link_to (image_tag @news.avatar.url(:thumb)), @news.avatar.url(:original), target: '_blank' %> </p><%= f.file_field :avatar, label: 'Add a new image', class: 'choose-image'%></p>
   	  <% else %>

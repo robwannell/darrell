@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160116164108) do
+ActiveRecord::Schema.define(version: 20160122165704) do
 
   create_table "endorsements", force: :cascade do |t|
     t.string   "firstname",    limit: 255
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20160116164108) do
     t.integer  "avatar_file_size",    limit: 4
     t.datetime "avatar_updated_at"
     t.string   "slug",                limit: 255
+    t.datetime "published_at"
   end
 
   create_table "pages", force: :cascade do |t|
