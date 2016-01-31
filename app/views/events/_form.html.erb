@@ -37,9 +37,21 @@
   
   <div class="field">
     
-    <%= f.text_area :content, class: 'edit-content' %>
+    <%= f.text_area :content, class: 'edit-content', id: 'summernote' %>
   </div>
   <div class="actions pull-right">
     <%= f.submit %>
   </div>
 <% end %>
+
+<script type="text/javascript">
+$('#summernote').summernote({
+  toolbar: [
+    // [groupName, [list of button]]
+	  ['insert', ['link']],
+    ['style', ['bold', 'italic', 'underline', 'clear']],
+    ['para', ['style', 'ul', 'ol']],
+   
+  ]
+});
+</script>

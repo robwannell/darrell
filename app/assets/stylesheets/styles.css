@@ -633,8 +633,12 @@ footer {
 	width:70%;
 }
 
-.edit-content {
-	min-height:300px;
+.edit-content textarea{
+	min-height:800px;
+	border:1px solid red;
+}
+.wysihtml5-sandbox {
+	min-height:500px;
 }
 
 .admin-card {
@@ -689,7 +693,6 @@ input.choose-image {
 .news-card {
 	padding:10px;
 	border-bottom:1px solid #eee;
-	
 }
 .news-card h5 {
 	margin:10px 0;

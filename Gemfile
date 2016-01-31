@@ -22,6 +22,9 @@ gem 'bootstrap_form'
 
 gem 'font-awesome-sass'
 
+gem 'summernote-rails'
+
+
 gem "simple_calendar", "~> 2.0"
 
 gem "paperclip", "~> 4.3"
