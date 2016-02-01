@@ -5,6 +5,8 @@ class PhotosController < ApplicationController
   # GET /photos.json
   def index
     @photos = Photo.all
+    @title = "Media - Download Images of Darrell"
+     @description = "Download high quality images of Darrell Steinberg, candidate for Sacramneto Mayor 2016"
   end
 
   # GET /photos/1

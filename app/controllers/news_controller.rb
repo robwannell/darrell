@@ -5,6 +5,7 @@ class NewsController < ApplicationController
   # GET /news.json
   def index
     @news = News.paginate(:page => params[:page], :per_page => 10)
+    @title = "News"
   end
 
   # GET /news/1
@@ -12,6 +13,8 @@ class NewsController < ApplicationController
   def show
     
     @stories = News.first(8)
+    @title = @news.title
+    @description = @news.description
   end
 
   # GET /news/new

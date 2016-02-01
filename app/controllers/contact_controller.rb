@@ -1,6 +1,8 @@
 class ContactController < ApplicationController
   def new
       @contact = Contact.new
+      @title = "Contact Us"
+      @description = "Contact the Darrell Steinberg for Sacramento Mayor 2016 campaign team"
     end
 
     def create

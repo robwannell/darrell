@@ -22,6 +22,8 @@ class PersonalsController < ApplicationController
   # GET /personals/1.json
   def show
     @personals = Personal.order("RAND()").first(5)
+    @title = @personal.name
+     @description = @personal.description
   end
 
   # GET /personals/new

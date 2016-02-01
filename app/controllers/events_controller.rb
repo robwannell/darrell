@@ -4,15 +4,18 @@ before_filter :authorize, except: [:index, :show]
   # GET /events
   # GET /events.json
   def index
+    @title = "Calendar of Events"
     @things = Event.all
      @events = Event.all
      @futureevents = Event.where('start_time >= ?', Date.today).order(:start_time)
+     @description = "Darrell Steinberg for Sacramento Mayor 2016 campaign events calendar"
   end
 
   # GET /events/1
   # GET /events/1.json
   def show
      @futureevents = Event.where('start_time >= ?', Date.today).order(:start_time)
+     @title = @event.name
   end
 
   # GET /events/new

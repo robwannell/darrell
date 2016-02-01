@@ -13,6 +13,9 @@ before_filter :authorize, except: [:index]
     @formerelecteds = Endorsement.where(category: 'Former Elected')
     @orgs = Endorsement.where(category: 'Organization')
     @individuals = Endorsement.where(category: 'Community Leader')
+    
+    @title = "Endorsements for Darrell"
+    @description = "Endorsements for Darrell Steinberg for Sacramento Mayor 2016"
   end
 
   # GET /endorsements/1
