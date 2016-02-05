@@ -1121,3 +1121,6 @@ input.choose-image {
 	padding-top:5px;
 }
 
+.note-popover {
+	display:none;
+}
