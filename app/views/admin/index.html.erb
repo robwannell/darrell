@@ -10,6 +10,13 @@
 	<strong><%= a.name.capitalize %></strong> - <%= mail_to a.email %><br/>
 	
 	<% end %>
+<div class="admin-panel">	
+<h3>Events</h3>
+<p>Add and manage Events here. Just head to the Event page to add a new one, or go to a specific event to edit it.</p>
+
+<p><%= link_to 'Manage Events', events_path, class: "btn btn-primary" %> 
+</div>
+
 
 <div class="admin-panel">	
 <h3>Issues</h3>
