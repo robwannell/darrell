@@ -1124,3 +1124,7 @@ input.choose-image {
 .note-popover {
 	display:none;
 }
+
+.issue-title {
+	padding-bottom:10px;
+}

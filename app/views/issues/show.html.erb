@@ -1,22 +1,3 @@
-<%= content_for :jumbotron do %>
-<div  style="background: url('<%= @issue.avatar.url(:original) %>') center center no-repeat;
-	background-size:cover; height:450px;">
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-  
-   
-		   <div class="jumbotron" >
-      
-        <div class="lead jumbylead">
-			  <div class="container "><div class="jumboleader"><%= @issue.title %></div></div>
-        
-      </div>
-    </div>
-
-</div>
-
-
-<% end %>
-
 	<% if current_user %>
     	<div class="edit alert" >
     <i> <%= link_to ' Edit ', edit_issue_path(@issue), class: "admin-edit fa fa-edit", dismissible: true %> </i>|<i> <%= link_to ' Delete', @issue, method: :delete, data: { confirm: 'Are you sure?' }, class: "admin-edit fa fa-trash" %></i>
@@ -28,15 +9,39 @@
     </div>
 <% end %>
 
-<p class="lead">
+<h1 class="issue-title"> <%= @issue.title %></h1>
+ <% if @issue.avatar.blank? %>
+ 
+	
+	
+ <% else %>
+<div class="news-img">
+ <%= image_tag @issue.avatar.url(:medium), class:"img-fluid"%>
+</div>
+ <% end%>
+ 
 
-  <%= @issue.description %>
+ 
+ 
+
 
 
 <p>
  
   <%= simple_format(@issue.content) %>
 </p>
+
+ 
+
+
+	
+
+<div class="clear"></div>
+
+	
+
+
+ 
 
 	
 
@@ -66,10 +71,12 @@
 
  <p><%= link_to 'Learn more', i %></p>
 </div>
+
+
 </div>
 <% end %>
 <% end %>
 <% end %>
-
+<%= link_to 'All issues', '/darrell/issues' %>
 
 
