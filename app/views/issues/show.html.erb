@@ -62,10 +62,10 @@
  
 <% @issues.each do |i| %>
  <% unless i == @issue %>
-<div class="card issue-card-sml">
+<div class="card">
 	
 	
-		<%= image_tag i.avatar.url(:thumb), class: "card-img-top issue-img-sml"%>
+		<%= image_tag i.avatar.url(:medium), class: "img-fluid"%>
 		<div class="card-block">
 <h5 class="card-title"><%= i.title %></h5>
 

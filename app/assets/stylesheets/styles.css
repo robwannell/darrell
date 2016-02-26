@@ -674,7 +674,7 @@ footer {
 }
 
 .issue-card img {
-	height:200px;
+	
 	width: 100%;
 }
 
@@ -1128,3 +1128,4 @@ input.choose-image {
 .issue-title {
 	padding-bottom:10px;
 }
+
