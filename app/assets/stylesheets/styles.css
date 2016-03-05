@@ -648,7 +648,7 @@ footer {
 .issue-card {
 	float:left;
 	width:320px;
-	min-height:440px;
+	min-height:460px;
 	margin:30px 40px 10px 0px;
 	border:1px solid #efefef;
 }
