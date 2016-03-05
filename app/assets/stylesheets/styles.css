@@ -652,6 +652,10 @@ footer {
 	margin:30px 0 0 0;
 }
 
+.card-block {
+	padding:20px 0 0 0;
+}
+
 .issue-card-sml {
 	font-size: 0.9em;
 	width:300px;
