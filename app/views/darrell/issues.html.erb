@@ -5,10 +5,10 @@
 <p class="lead">Learn more about Darrell's vision for Sacramento, and the key policies he will champion as Mayor.
 <p class="lead">As the campaign develops, he will be talking about more issues, so stay tuned. 
  
- 
+ <div class="row">
 <% @issues.each do |i| %>
  
-<div class="card issue-card">
+<div class="col-md-3 issue-card">
 	
 	
 		<%= image_tag i.avatar.url(:medium), class: "img-fluid"%>
@@ -21,7 +21,7 @@
 
 <% end %>
 
-
+</div>
 
 
 
