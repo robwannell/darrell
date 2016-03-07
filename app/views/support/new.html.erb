@@ -1,12 +1,12 @@
  <h1>Support Darrell</h1>
  
- <p>Our grassroots campaign depends on great volunteers! Please complete this short form and we will contact you about how you can help us reach the finish line strong.</p>
+ <p><% unless @page.blank? %><%= simple_format(@page.content)%><% end %></p>
 
 <!-- Begin MailChimp Signup Form -->
 <div id="mc_embed_signup">
 <form action="//darrell4sacramento.us12.list-manage.com/subscribe/post?u=0063416f03ea303e7a07706a3&amp;id=aaf9bcbee2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
-	<h2>Subscribe to our mailing list</h2>
+	
 <div class="indicates-required asterisk"><span class="">*</span> indicates required</div>
 <div class="form-group">
 	
@@ -63,14 +63,15 @@
 
 <div class="form-group mc-ul">
     <h5>Volunteer Options </h5>
-    <ul><li><input type="checkbox" value="1" name="group[553][1]" id="mce-group[553]-553-0"><label for="mce-group[553]-553-0">Add My Name as a Public Supporter!</label></li>
+    <ul>
+		<!-- <li><input type="checkbox" value="1" name="group[553][1]" id="mce-group[553]-553-0"><label for="mce-group[553]-553-0">Add My Name as a Public Supporter!</label></li> -->
 <li><input type="checkbox" value="2" name="group[553][2]" id="mce-group[553]-553-1"><label for="mce-group[553]-553-1">Walk Door-to-Door!</label></li>
-<li><input type="checkbox" value="4" name="group[553][4]" id="mce-group[553]-553-2"><label for="mce-group[553]-553-2">Become a Precinct Captain!</label></li>
+<!-- <li><input type="checkbox" value="4" name="group[553][4]" id="mce-group[553]-553-2"><label for="mce-group[553]-553-2">Become a Precinct Captain!</label></li> -->
 <li><input type="checkbox" value="8" name="group[553][8]" id="mce-group[553]-553-3"><label for="mce-group[553]-553-3">Call Voters!</label></li>
 <li><input type="checkbox" value="16" name="group[553][16]" id="mce-group[553]-553-4"><label for="mce-group[553]-553-4">Display a Lawn Sign for Darrell!</label></li>
 <li><input type="checkbox" value="32" name="group[553][32]" id="mce-group[553]-553-5"><label for="mce-group[553]-553-5">Host a Meet &amp; Greet for Darrell!</label></li>
-<li><input type="checkbox" value="64" name="group[553][64]" id="mce-group[553]-553-6"><label for="mce-group[553]-553-6">Join the Ironing Board Brigade</label></li>
-<li><input type="checkbox" value="128" name="group[553][128]" id="mce-group[553]-553-7"><label for="mce-group[553]-553-7">I'm Voting For Darrell Because...(Use Comment Box to Tell Us Why!)</label></li>
+<li><input type="checkbox" value="64" name="group[553][64]" id="mce-group[553]-553-6"><label for="mce-group[553]-553-6">Table at the farmers market etc.</label></li>
+<!-- <li><input type="checkbox" value="128" name="group[553][128]" id="mce-group[553]-553-7"><label for="mce-group[553]-553-7">I'm Voting For Darrell Because...(Use Comment Box to Tell Us Why!)</label></li> -->
 <li><input type="checkbox" value="256" name="group[553][256]" id="mce-group[553]-553-8"><label for="mce-group[553]-553-8">Donate Skills another Way (Use Comment Box)</label></li>
 </ul>
 </div>

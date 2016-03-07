@@ -94,7 +94,12 @@ html {
         margin: 15px 0;
     }
 	
+	.jumboleader {
+		
+		font-size: 2.5rem;
+		    
 	
+	}
 	
     /* since 3.1.0 */
     .navbar-collapse.collapse.in { 

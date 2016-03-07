@@ -2,6 +2,8 @@ class SupportController < ApplicationController
   def new
     @title = "Support Darrell"
     @description = "Support Darrell Steinberg for Sacrmaneto Mayor, use this form to let us know how you can help"
+    @page = Page.find(3)
+    
     @support = Support.new
     
     
