@@ -95,6 +95,16 @@
 					<li class="droppy"><%= link_to 'Personal References', darrell_personalreferences_path %></li>
 		           </ul>
  		        </li>
+				
+				
+ 		<li class="nav-item nav-link dropdown" style="display:none">
+ 		          <a class="dropdown-toggle disabled" href="/darrell/issues"  >Issues<span class="caret"></span></a>
+ 		          <ul class="dropdown-menu drops" role="menu">
+					  <% @issues.each do |i| %>
+ 		            <li class="droppy"><%= link_to i.title, i %></li>
+ 					<% end %>
+		           </ul>
+ 		        </li>
 		 
          <li class="nav-item">
            <%= link_to 'News', news_index_path, class: 'nav-link' %>
@@ -177,7 +187,7 @@
 					<p><strong>Steinberg for Sacramento Mayor</strong><br/>
 						1100 O Street, Suite 200<br/>
 						Sacramento, CA 95814<br/><br/>
-						<strong>Tel:</strong> 916-538-0781<br/>
+						<strong>Tel: </strong>(916) 588-4078<br/>
 					<strong>Email:</strong> contact@Steinberg4Sac.com<br/>
 					
 

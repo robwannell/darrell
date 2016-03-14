@@ -3,11 +3,17 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   
-  before_filter :grab_news
+  before_filter :grab_news, :grab_issues
   
   def grab_news
     @newsband = News.first
     @eventband = Event.where('start_time >= ?', Date.today).order("start_time ASC").first
+  
+  end
+  
+  def grab_issues
+    @issues = Issue.all
+    
   
   end
   
