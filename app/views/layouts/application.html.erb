@@ -97,7 +97,7 @@
  		        </li>
 				
 				
- 		<li class="nav-item nav-link dropdown" style="display:none">
+ 		<li class="nav-item nav-link dropdown">
  		          <a class="dropdown-toggle disabled" href="/darrell/issues"  >Issues<span class="caret"></span></a>
  		          <ul class="dropdown-menu drops" role="menu">
 					  <% @issues.each do |i| %>
@@ -131,22 +131,7 @@
 <div class="page">
 	
 	<div class="container">
-		 <!--
-			 
-			 <script>
-		$('#monitor').html($(window).width());
-
-		$(window).resize(function() {
-		    var viewportWidth = $(window).width();
-		    $('#monitor').html(viewportWidth);
-		});
-		</script>
-		
-		<div class="container-fluid">
-		 Current viewport width:<span id="monitor"></span> 
-		</div>
-		 
-		 -->
+	
 		
 <% if notice %>
 <div class="notices">
