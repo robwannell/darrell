@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   
   get 'darrell/personalreferences', to: 'darrell#personalreferences'
   get 'darrell/issues', to: 'darrell#issues'
+  get 'darrell/video', to: 'darrell#video'
   
   resources :contact, only: [:new, :create]
   get '/contact', to: 'contact#new'
