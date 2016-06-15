@@ -1,6 +1,8 @@
+<%= content_for :override do %>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Photo Gallery</h1>
+<h1>Darrell's Photo Gallery</h1>
 <div>
 <p><% if current_user %><%= link_to 'New Pic', new_pic_path %><% end %>
 </div>
@@ -13,3 +15,4 @@
 	   <% end %>
 <br>
 
+<% end %>
