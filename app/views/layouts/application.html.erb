@@ -107,7 +107,7 @@
 		           </ul>
  		        </li>
 		 
-         <li class="nav-item">
+       <!--   <li class="nav-item">
            <%= link_to 'News', news_index_path, class: 'nav-link' %>
          </li>
          <li class="nav-item">
@@ -119,10 +119,17 @@
          <li class="nav-item">
            <%= link_to 'Support', support_path, class: 'nav-link' %>
          </li>
+		   
+		  
+          <li class="nav-item">
+            <%= link_to 'Photo Gallery', pics_path, class: 'nav-link' %>
+          </li>
+		     -->
          <li class="nav-item">
            <%= link_to 'Contact Us', contact_path, class: 'nav-link' %>
          </li>
 		 
+		
 		
        </ul>
      </div>
@@ -170,12 +177,9 @@
 			  <div class="row">
 			      <div class="col-sm-4 footer-col">
 			        <h3>Contact us</h3>
-					<p><strong>Steinberg for Sacramento Mayor</strong><br/>
-						6760 Folsom Blvd, Suite 100<br/>
-						Sacramento, CA 95819<br/><br/>
-						<strong>Tel: </strong>(916) 588-4078<br/>
+					<p>
 					<strong>Email:</strong> contact@Steinberg4Sac.com<br/>
-					
+					Or use <span class="footer-link"><%= link_to 'this form to send a message', contact_path%></span>
 
 						
 			      </div>
@@ -185,17 +189,17 @@
 					   <li><%= link_to 'Home', root_url, class: 'nav-link' %></li>
 					   <li><%= link_to 'About Darrell', darrell_about_path, class: 'nav-link' %></li>
 					   <li><%= link_to 'Personal References', darrell_personalreferences_path, class: 'nav-link' %></li>
-					   <li><%= link_to 'News', news_index_path, class: 'nav-link' %></li>
+					  <!--  <li><%= link_to 'News', news_index_path, class: 'nav-link' %></li> -->
 					   
 					  
 					   
 				   </ul>
 				   
 				   <ul>
-					   <li><%= link_to 'Events', events_path, class: 'nav-link' %></li>
+					  <!--  <li><%= link_to 'Events', events_path, class: 'nav-link' %></li>
 					   <li><%= link_to 'Endorsements', endorsements_path, class: 'nav-link' %></li>
 					   <li><%= link_to 'Support', support_path, class: 'nav-link' %></li>
-					   
+					   -->
 					   <li><%= link_to 'Contact', contact_path, class: 'nav-link' %></li>
 					   
 				   </ul>

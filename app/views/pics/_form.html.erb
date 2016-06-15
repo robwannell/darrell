@@ -1,0 +1,37 @@
+<%= bootstrap_form_for(@pic) do |f| %>
+  <% if @pic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pic.errors.count, "error") %> prohibited this pic from being saved:</h2>
+
+      <ul>
+      <% @pic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+   
+    <%= f.text_field :caption, label: 'Label - Optional' %>
+  </div>
+  
+  
+  <div class="field">
+   
+   <h6>Image uploads must be less than 2MB in size</h6>
+	
+  	  <% unless @pic.avatar.blank? %>
+  	  <p><b>Current image</b><br/><%= link_to (image_tag @pic.avatar.url(:thumb)), @pic.avatar.url(:original), target: '_blank' %> </p><%= f.file_field :avatar, label: 'Add a new image', class: 'choose-image'%></p>
+  	  <% else %>
+  	  <div class="field">
+  	  <%= f.file_field :avatar, label: 'Add an image - ', class: 'choose-image'%>
+    </div>
+  	  <% end %>
+	  
+  </div>
+    <div class="actions pull-right">
+      <%= f.submit %>
+    </div>
+  <% end %>
+  

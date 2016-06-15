@@ -342,6 +342,16 @@ footer {
 	
 }
 
+.footer-link  a {
+	color:#FB9A3B;
+}
+
+.footer-link a:hover {
+	
+	text-decoration:underline;
+	
+}
+
 .footer-col ul {
 	margin-left:0;
 	padding-left:0;
@@ -1134,3 +1144,19 @@ input.choose-image {
 	padding-bottom:10px;
 }
 
+.pic-img {
+	width:900px;
+	margin:0px auto;
+	text-align:center;
+}
+
+.thumbnail {
+	float:left;
+	width: 170px;
+	padding:10px;
+}
+
+.img-gallery{
+	
+	
+}

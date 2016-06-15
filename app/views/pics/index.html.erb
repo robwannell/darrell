@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Photo Gallery</h1>
+<div>
+<p><% if current_user %><%= link_to 'New Pic', new_pic_path %><% end %>
+</div>
+
+
+    <% @pics.each do |pic| %>
+     <div class="thumbnail"> 
+       <%= link_to image_tag(pic.avatar(:thumb)), pic, :class => 'img-fluid'%>
+   </div>
+	   <% end %>
+<br>
+

@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<% content_for :override do %>
+<div class="pic-img">
+	
+	<% if @prev_photo %><span class="fa fa-arrow-left"></span>
+	<%= link_to ' Previous', @prev_photo, class: "btn btn-default" %> 
+	<% else %>
+	<%= link_to 'Previous', @prev_photo, class: "btn btn-default disabled" %> 
+	<% end %>
+	|
+	<% if @next_photo %>
+	<%= link_to ' Next', @next_photo, class: "btn btn-default" %><span class="fa fa-arrow-right"></span>
+	<% else %>
+	<%= link_to ' Next', @next_photo, class: "btn btn-default disabled" %> 
+	<% end %>
+	
+	
+	<% if @next_photo %>
+	<%= link_to image_tag(@pic.avatar.url(:medium)),  @next_photo, class:"img-fluid img-responsive img-gallery" %>
+	<% else %>
+	<%= image_tag @pic.avatar.url(:medium), class:"img-fluid img-responsive img-gallery" %> 
+	<% end %>
+ <br/>
+ <p>
+   <strong>
+   <%= @pic.caption %></strong>
+ </p>
+ <p><% if current_user %> <%= link_to 'Edit', edit_pic_path(@pic), class: "admin-edit fa fa-edit" %> |  <i> <%= link_to ' Delete', @news, method: :delete, data: { confirm: 'Are you sure?' }, class: "admin-edit fa fa-trash" %></i> | <% end %>
+<%= link_to 'Back to Gallery', pics_path %>
+</div>
+
+
+
+
+<% end %>
