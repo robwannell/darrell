@@ -9,8 +9,8 @@ class ContactMailer < ActionMailer::Base
       @name = name
       @email = email
       @body = body
-      
-      mail(subject: 'Contact message', reply_to: email, to: recip)
+      @timestamp = DateTime.now
+      mail(subject: "Contact message #{@timestamp}", reply_to: email, to: recip)
   end
 end
 

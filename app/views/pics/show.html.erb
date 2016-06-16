@@ -1,26 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <% content_for :override do %>
-<div class="pic-img">
+<div class="pic-container ">
 	
 	<% if @prev_photo %><span class="fa fa-arrow-left"></span>
-	<%= link_to ' Previous', @prev_photo, class: "btn btn-default" %> 
+	<%= link_to 'Previous', @prev_photo, class: "btn btn-default" %> 
 	<% else %>
 	<%= link_to 'Previous', @prev_photo, class: "btn btn-default disabled" %> 
 	<% end %>
 	|
 	<% if @next_photo %>
-	<%= link_to ' Next', @next_photo, class: "btn btn-default" %><span class="fa fa-arrow-right"></span>
+	<%= link_to 'Next', @next_photo, class: "btn btn-default" %><span class="fa fa-arrow-right"></span>
 	<% else %>
-	<%= link_to ' Next', @next_photo, class: "btn btn-default disabled" %> 
+	<%= link_to 'Next', @next_photo, class: "btn btn-default disabled" %> 
 	<% end %>
 	
+	<div class="pic col-md-12">
 	
-	<% if @next_photo %>
-	<%= link_to image_tag(@pic.avatar.url(:medium)),  @next_photo, class:"img-fluid img-responsive img-gallery" %>
-	<% else %>
-	<%= image_tag @pic.avatar.url(:medium), class:"img-fluid img-responsive img-gallery" %> 
-	<% end %>
+	<%= image_tag @pic.avatar.url(:medium), class: "img-fluid center-block"  %> 
+
+</div>
  <br/>
  <p>
    <strong>

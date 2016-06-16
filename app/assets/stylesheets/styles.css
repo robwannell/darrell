@@ -1144,10 +1144,14 @@ input.choose-image {
 	padding-bottom:10px;
 }
 
-.pic-img {
-	width:900px;
-	margin:0px auto;
+.pic-container{
+	width:100%;
 	text-align:center;
+	color:#ccc;
+}
+
+.pic {
+	padding-bottom:20px;
 }
 
 .thumbnail {
@@ -1156,7 +1160,3 @@ input.choose-image {
 	padding:10px;
 }
 
-.img-gallery{
-	
-	
-}
