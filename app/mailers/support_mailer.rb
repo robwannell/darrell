@@ -3,7 +3,7 @@ class SupportMailer < ActionMailer::Base
   
   
     
-    def support_email(name, email, phone, address, body, help, recip)
+    def appointment_email(firstname, email, phone, address, body, help, recip)
         @name = name
         @email = email
         @phone = phone

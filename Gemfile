@@ -35,6 +35,7 @@ gem 'ranked-model'
 gem 'jquery-ui-rails'
 
 
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'
 end
@@ -42,6 +43,9 @@ end
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+gem "combined_time_select", "~> 1.0.1"
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

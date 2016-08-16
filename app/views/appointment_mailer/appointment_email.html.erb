@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+        <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p>Appointment request sent via steinberg4sac.com sent at <%= Time.now.strftime('%F %T') %></p>
+		<p><strong><%= @firstname %> <%= @lastname %></strong>
+ 
+	<p><strong>Email: </strong><%= @email %>
+	<p><strong>Phone: </strong><%= @cellphone %>
+	
+	<p><strong>Organization: </strong> <%= @organization %>
+	
+	<p><strong>Topic: </strong> <%= @topic %>
+	<p><strong>Purpose: </strong><%= @purpose %>
+		
+
+			<p><strong>Meeting duration:</strong> 	<% if @time_requested == "0" %>
+30 minutes 
+	<% end %>
+	
+	<% if @time_requested == "1" %>
+1 hour
+	<% end %>
+	
+	<% if @time_requested == "2" %>
+Other
+	<% end %>
+	
+<p><strong>Date: </strong><%= @date.strftime("%A, %B %-d, %Y") %>
+<p><strong>Time: </strong><%= @time.strftime("%I:%M %p")  %>
+
+<p><strong>Location:</strong> <%= @location %>
+<p><strong>Address: </strong><%= @address %>
+
+
+	<p><strong>Number of attendees:</strong> <%= @attendees_number %>
+	<p><strong>Notable attendees:</strong> <%= @notable_attendees %>
+	
+	<% if @press == "0" %>
+<p>	<strong>No press</strong>
+	<% end %>
+	
+	<% if @time_requested == "1" %>
+<p style="color:ffcc00;text-transform:uppercase;">	<strong>Press in attendance</strong>
+	<% end %>
+	
+<p>	<%= simple_format(@background_info) %>
+<p>	<%= @website %>
+    </body>
+</html>

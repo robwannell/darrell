@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
  
+ resources :appointment, only: [:new, :create]
+ get '/appointment', to: 'appointment#new'
+  match '/send_appointment', to: 'appointment#send_appointment', via: 'post'
+
   resources :pics
   resources :personals
   resources :photos

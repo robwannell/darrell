@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+<script>
+$( function() {
+  $( "#datepicker" ).datepicker();
+} );
+</script>
+
+
+
+<h1>Schedule an appointment</h1>
+
+
+		
+		<p>Please use this form to send us an appointment request, and we'll get back to as soon as we can.
+
+
+   
+	<%= bootstrap_form_for @appointment, url: {:action=>'create'} do |f| %>
+
+	  <%= f.text_field :firstname %>
+			<%= f.text_field :lastname %>
+			<%= f.text_field :organization, placeholder: "Your organization or company" %>
+			<%= f.telephone_field :cellphone, placeholder: "Cell phone or other contact number" %>
+	  <%= f.email_field :email %>
+			<%= f.email_field :email_confirmation %>
+			<%= f.text_field :topic, placeholder: "What does this meeting concern?" %>
+			<%= f.text_area :purpose, placeholder: "Purpose of the meeting" %>
+			
+			<%= f.form_group :time_requested, label: { text: "Time requested (check one)" }, help: "" do %>
+			  <%= f.radio_button :time_requested, 0, label: "30 mins", checked: true %>
+			  <%= f.radio_button :time_requested, 1, label: "1 hour" %>
+			  <%= f.radio_button :time_requested, 2, label: "Other" %>
+			<% end %>
+			
+			<%= f.text_field :date, :id => "datepicker" %>
+			<%= f.time_select :time,
+			  :combined => true,
+			  :default => Time.now.change(:hour => 11, :min => 30),
+			  :minute_interval => 15,
+			  :time_separator => "",
+			  :start_hour => 8,
+			  :start_minute => 30,
+			  :end_hour => 18,
+			  :end_minute => 30
+			%>
+			
+			<%= f.text_field :location, placeholder: "Meeting location" %>
+			<%= f.text_field :address, placeholder: "Street, City, Zip"%>
+			
+			<%= f.text_field :attendees_number %>
+			<%= f.text_field :notable_attendees %>
+			
+			<%= f.form_group :press, label: { text: "Will press be notified / in attendance? (select one)" }, help: "" do %>
+			  <%= f.radio_button :press, 0, label: "No", checked: true %>
+			  <%= f.radio_button :press, 1, label: "Yes" %>
+			<% end %>
+			
+			<%= f.text_area :background_info, label: "Background information", placeholder: "Any extra information you can provide?" %>
+			<%= f.text_field :website, placeholder: "Add a website if it's relevant" %>
+			
+			
+
+  	
+		
+	 
+  	
+		
+	 <%= f.submit "Send", class: "btn btn-default btn-about pull-right" %>
+  <div class="clear"></div>
+  <p> </p>
+
+	<% end %>
+	
+	<% content_for :rh do %>
+	<%= render '/layouts/support_panel.html.erb' %>
+	<%= render '/layouts/endorsement_panel.html.erb' %>
+	
+	
+	<% end %>
