@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-        <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+   
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -27,7 +26,7 @@
 	<% end %>
 	
 	<% if @time_requested == "2" %>
-Other
+<%= @time_requested_other %>
 	<% end %>
 	
 <p><strong>Date: </strong><%= @date.strftime("%A, %B %-d, %Y") %>
@@ -44,8 +43,8 @@ Other
 <p>	<strong>No press</strong>
 	<% end %>
 	
-	<% if @time_requested == "1" %>
-<p style="color:ffcc00;text-transform:uppercase;">	<strong>Press in attendance</strong>
+	<% if @press == "1" %>
+<p style="color:#FF0909;text-transform:uppercase;">	<strong>Press in attendance</strong>
 	<% end %>
 	
 <p>	<%= simple_format(@background_info) %>

@@ -9,6 +9,12 @@ body {
 	padding:5px;
 	background-color: #F0CCCB;
 }
+
+.error {
+	color:#FF0909;
+	background:#FFD5D5;
+	padding:10px;
+}
 .lead {
 	font-size: 1.4em;
 }
@@ -1159,4 +1165,5 @@ input.choose-image {
 	width: 170px;
 	padding:10px;
 }
+
 

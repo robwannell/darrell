@@ -20,6 +20,13 @@ $( function() {
 
    
 	<%= bootstrap_form_for @appointment, url: {:action=>'create'} do |f| %>
+ <% if @appointment.errors.any? %>
+   <div id="error_explanation">
+     <h3 class="error"><%= pluralize(@appointment.errors.count, "error") %> prohibited this from sending - see below</h3>
+
+    
+   </div>
+ <% end %>
 
 	  <%= f.text_field :firstname %>
 			<%= f.text_field :lastname %>
@@ -30,12 +37,13 @@ $( function() {
 			<%= f.text_field :topic, placeholder: "What does this meeting concern?" %>
 			<%= f.text_area :purpose, placeholder: "Purpose of the meeting" %>
 			
-			<%= f.form_group :time_requested, label: { text: "Time requested (check one)" }, help: "" do %>
-			  <%= f.radio_button :time_requested, 0, label: "30 mins", checked: true %>
-			  <%= f.radio_button :time_requested, 1, label: "1 hour" %>
-			  <%= f.radio_button :time_requested, 2, label: "Other" %>
+			<%= f.form_group :time_requested, label: { text: "Time requested (check one) :" }, help: "" do %>
+			  <%= f.radio_button :time_requested, 0, label: "30 mins",  inline: true %>
+			  <%= f.radio_button :time_requested, 1, label: "1 hour", inline: true %>
+			  <%= f.radio_button :time_requested, 2, label: "Other (please specify in next box)", inline: true %>
+					
 			<% end %>
-			
+			<%= f.text_field :time_requested_other, label: "Requested duration" %>
 			<%= f.text_field :date, :id => "datepicker" %>
 			<%= f.time_select :time,
 			  :combined => true,

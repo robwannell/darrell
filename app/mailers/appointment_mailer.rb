@@ -3,7 +3,7 @@ class AppointmentMailer < ActionMailer::Base
   
   
     
-  def appointment_email(firstname, lastname, email, organization, cellphone, topic, purpose, time_requested, date, time, location, address, attendees_number, notable_attendees, press, background_info, website)
+  def appointment_email(firstname, lastname, email, organization, cellphone, topic, purpose, time_requested, time_requested_other, date, time, location, address, attendees_number, notable_attendees, press, background_info, website)
       @firstname = firstname
       @lastname = lastname
       @email = email
@@ -12,6 +12,7 @@ class AppointmentMailer < ActionMailer::Base
       @topic = topic
       @purpose = purpose
       @time_requested = time_requested
+      @time_requested_other = time_requested_other
       @date = date
       @time = time
       @location = location

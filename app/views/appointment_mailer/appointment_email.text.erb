@@ -23,8 +23,8 @@ The following is a message sent via the website from <%= "#{ @firstname } #{ @la
 	Other
 	<% end %>
 	
-Date: <%= @date %>
-Time: <%= @time %>
+Date: %= @date.strftime("%A, %B %-d, %Y") %>
+Time: <%= @time.strftime("%I:%M %p")  %>
 
 Location: <%= @location %>
 Address<%= @address %>
@@ -38,7 +38,7 @@ Notable attendees	<%= @notable_attendees %>
 	<% end %>
 	
 	<% if @time_requested == "1" %>
-	Press in attendance
+	PRESS IN ATTENDANCE
 	<% end %>
 	
 Background info:	<%= @background_info %>

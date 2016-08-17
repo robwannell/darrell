@@ -15,6 +15,8 @@ class AppointmentController < ApplicationController
      @appointment = Appointment.new(params[:appointment])
    
      unless params[:appointment][:date].blank?
+      
+      
      @appointment.date = Date.strptime(params[:appointment][:date], "%m/%d/%Y")
     end
     
@@ -29,6 +31,7 @@ class AppointmentController < ApplicationController
                                           @appointment.topic,
                                           @appointment.purpose,
                                           @appointment.time_requested,
+                                          @appointment.time_requested_other,
                                           @appointment.date,
                                           @appointment.time,
                                           @appointment.location,
@@ -41,6 +44,9 @@ class AppointmentController < ApplicationController
                                           ).deliver
       redirect_to root_path, notice: 'Thank you - your request has been sent!'
     else
+     unless params[:appointment][:date].blank?
+     @appointment.date = params[:appointment][:date]
+    end
       render :new
     end
      
