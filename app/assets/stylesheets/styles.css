@@ -15,6 +15,11 @@ body {
 	background:#FFD5D5;
 	padding:10px;
 }
+
+label.required:after {
+  content:" *";
+		color:#FF0909;
+}
 .lead {
 	font-size: 1.4em;
 }
