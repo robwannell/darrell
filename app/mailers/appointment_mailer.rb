@@ -22,7 +22,7 @@ class AppointmentMailer < ActionMailer::Base
       @background_info = background_info
       @website = website
       
-        mail(from: email, subject: 'Appointment request', reply_to: email, to: "kellyfongrivas@gmail.com")
+        mail(from: email, subject: 'Appointment request', reply_to: email, to: "jaycob@steinberg4sac.com")
     end
 end
 
