@@ -14,11 +14,14 @@ class AppointmentController < ApplicationController
  
      @appointment = Appointment.new(params[:appointment])
    
+     
+   
+   
      unless params[:appointment][:date].blank?
-      
-      
      @appointment.date = Date.strptime(params[:appointment][:date], "%m/%d/%Y")
     end
+    
+    
     
     
      if @appointment.valid?
@@ -30,6 +33,11 @@ class AppointmentController < ApplicationController
                                           @appointment.cellphone,
                                           @appointment.topic,
                                           @appointment.purpose,
+                                          @appointment.speaking,
+                                          @appointment.speech_topic,
+                                          @appointment.speech_duration,
+                                          @appointment.qa,
+                                          @appointment.qa_duration,
                                           @appointment.time_requested,
                                           @appointment.time_requested_other,
                                           @appointment.date,

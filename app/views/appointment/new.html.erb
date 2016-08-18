@@ -37,6 +37,73 @@ $( function() {
 			<%= f.text_field :topic, placeholder: "What does this meeting concern?" %>
 			<%= f.text_area :purpose, placeholder: "Purpose of the meeting" %>
 			
+			
+		
+		<script>
+			$(document).ready(function(){
+			    $("#speaking_div").css("display","none");
+							$("#meeting_div").css("display","none");
+			        $(".tog").click(function(){
+			        if ($('input[name="appointment[speaking]"]:checked').val() == "1" ) {
+			            $("#speaking_div").slideDown("fast");
+															$("#meeting_div").slideUp("fast"); //Slide Down Effect
+			        } 
+											
+			        if ($('input[name="appointment[speaking]"]:checked').val() == "0" ) {
+			            $("#speaking_div").slideUp("fast");
+															$("#meeting_div").slideDown("fast"); //Slide Down Effect
+			        } 
+			     });
+        
+     
+			});</script>	
+			
+			<script>
+				$(document).ready(function(){
+				    $("#qa_div").css("display","none");
+				        $(".tog").click(function(){
+				        if ($('input[name="appointment[qa]"]:checked').val() == "1" ) {
+				            $("#qa_div").slideDown("fast");
+																 //Slide Down Effect
+				        } else {
+				            $("#qa_div").slideUp("fast");  //Slide Up Effect
+				        }
+				     });
+				});</script>
+			
+		
+			<%= f.form_group :speaking, label: { text: "Is this a Meeting or Speaking request?" }, help: "" do %>
+			  <%= f.radio_button :speaking, 0, label: "Meeting",  inline: true, class: "tog", name: "appointment[speaking]"%>
+			  <%= f.radio_button :speaking, 1, label: "Speaking", inline: true, class: "tog", name: "appointment[speaking]" %>
+			  
+					
+			<% end %>
+	      
+	<div id="speaking_div" class="formset">
+		<h4>Speaking</h4>
+	<%= f.text_area :speech_topic, placeholder: "Include specific topics or talking points you would like the Mayor-elect to include in his comments." %>
+	
+	<%= f.text_field :speech_duration, placeholder: "How long would you like the Mayor-elect to speak?" %>
+	
+	<%= f.form_group :qa, label: { text: "Will there be audience Q&A?" }, help: "" do %>
+	  <%= f.radio_button :qa, 0, label: "No",  inline: true, class: "tog", name: "qa" , checked: true, name: "appointment[qa]"%>
+	  <%= f.radio_button :qa, 1, label: "Yes", inline: true, class: "tog", name: "qa", name: "appointment[qa]" %>
+	  
+			
+	<% end %>
+
+	<div id="qa_div" class="formset">
+			<h4>Duration</h4>
+		<%= f.text_field :qa_duration, placeholder: "How long will the Q&A be?", label: "Q&A Duration" %>
+	</div>
+	
+	</div>
+	
+	
+	
+		
+		<div id="meeting_div" class="formset">	
+				<h4>Meeting</h4>
 			<%= f.form_group :time_requested, label: { text: "Time requested (check one) :" }, help: "" do %>
 			  <%= f.radio_button :time_requested, 0, label: "30 mins",  inline: true %>
 			  <%= f.radio_button :time_requested, 1, label: "1 hour", inline: true %>
@@ -44,6 +111,10 @@ $( function() {
 					
 			<% end %>
 			<%= f.text_field :time_requested_other, label: "Requested duration" %>
+			
+		</div>
+		
+		
 			<%= f.text_field :date, :id => "datepicker" %>
 			<%= f.time_select :time,
 			  :combined => true,

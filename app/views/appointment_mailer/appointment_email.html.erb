@@ -15,9 +15,11 @@
 	
 	<p><strong>Topic: </strong> <%= @topic %>
 	<p><strong>Purpose: </strong><%= @purpose %>
+		<%= @speaking %>
+		<% if @speaking == "0" %>
 		
-
-			<p><strong>Meeting duration:</strong> 	<% if @time_requested == "0" %>
+<p><strong>Meeting</strong></p>		
+	<p><strong>Meeting duration:</strong> 	<% if @time_requested == "0" %>
 30 minutes 
 	<% end %>
 	
@@ -29,6 +31,34 @@
 <%= @time_requested_other %>
 	<% end %>
 	
+	<% end %>
+	
+		<% if @speaking %>
+		
+		<p><b>Speaking</b></p>
+		
+		<p><b>Speech Topic:</b><br/>
+			<%= simple_format(@speech_topic) %>
+			
+			<p><b>Speech duration:</b> <%= @speech_duration %></p>
+			
+			<% if @qa == "1"%>
+			
+			<p><b>Q&A? Yes
+			
+						<% unless @qa_duration.blank?%>	
+						<%= @qa_duration %>
+						<% else %>
+						Q&A duration not specified
+						<% end %>
+			
+			<% end %>
+		
+		
+		<% end %>
+		
+		
+		
 <p><strong>Date: </strong><%= @date.strftime("%A, %B %-d, %Y") %>
 <p><strong>Time: </strong><%= @time.strftime("%I:%M %p")  %>
 
