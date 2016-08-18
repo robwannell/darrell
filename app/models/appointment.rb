@@ -8,6 +8,7 @@ class Appointment
   validates :firstname, presence: true
   validates :lastname, presence: true
   validates :cellphone, presence: true
+  validates :speaking, presence: true
   validates :email, presence: true
   validates :email_confirmation, presence: true
     validates_confirmation_of :email, :message => "should match email"

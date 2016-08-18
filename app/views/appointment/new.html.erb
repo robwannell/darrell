@@ -34,8 +34,8 @@ $( function() {
 			<%= f.telephone_field :cellphone, placeholder: "Cell phone or other contact number" %>
 	  <%= f.email_field :email %>
 			<%= f.email_field :email_confirmation %>
-			<%= f.text_field :topic, placeholder: "What does this meeting concern?" %>
-			<%= f.text_area :purpose, placeholder: "Purpose of the meeting" %>
+			<%= f.text_field :topic, placeholder: "What does this meeting/event concern?" %>
+			<%= f.text_area :purpose, placeholder: "Purpose of the meeting/event" %>
 			
 			
 		
@@ -103,7 +103,7 @@ $( function() {
 	
 		
 		<div id="meeting_div" class="formset">	
-				<h4>Meeting</h4>
+				<h4>Meetings & Events</h4>
 			<%= f.form_group :time_requested, label: { text: "Time requested (check one) :" }, help: "" do %>
 			  <%= f.radio_button :time_requested, 0, label: "30 mins",  inline: true %>
 			  <%= f.radio_button :time_requested, 1, label: "1 hour", inline: true %>
@@ -118,22 +118,22 @@ $( function() {
 			<%= f.text_field :date, :id => "datepicker" %>
 			<%= f.time_select :time,
 			  :combined => true,
-			  :default => Time.now.change(:hour => 11, :min => 30),
+			  :default => Time.now.change(:hour => 12, :min => 00),
 			  :minute_interval => 15,
 			  :time_separator => "",
-			  :start_hour => 8,
-			  :start_minute => 30,
-			  :end_hour => 18,
-			  :end_minute => 30
+			  :start_hour => 7,
+			  :start_minute => 00,
+			  :end_hour => 20,
+			  :end_minute => 00
 			%>
 			
-			<%= f.text_field :location, placeholder: "Meeting location" %>
+			<%= f.text_field :location, placeholder: "Location" %>
 			<%= f.text_field :address, placeholder: "Street, City, Zip"%>
 			
 			<%= f.text_field :attendees_number %>
 			<%= f.text_field :notable_attendees %>
 			
-			<%= f.form_group :press, label: { text: "Will press be notified / in attendance? (select one)" }, help: "" do %>
+			<%= f.form_group :press, label: { text: "Will press be notified/in attendance? (select one)" }, help: "" do %>
 			  <%= f.radio_button :press, 0, label: "No", checked: true %>
 			  <%= f.radio_button :press, 1, label: "Yes" %>
 			<% end %>

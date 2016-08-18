@@ -14,12 +14,12 @@
 	<p><strong>Organization: </strong> <%= @organization %>
 	
 	<p><strong>Topic: </strong> <%= @topic %>
-	<p><strong>Purpose: </strong><%= @purpose %>
+	<p><strong>Purpose: </strong><%= simple_format(@purpose) %>
 		<%= @speaking %>
 		<% if @speaking == "0" %>
 		
-<p><strong>Meeting</strong></p>		
-	<p><strong>Meeting duration:</strong> 	<% if @time_requested == "0" %>
+	<p style="color:#777"><b>MEETINGS & EVENTS</b></p>
+	<p><strong>Duration:</strong> 	<% if @time_requested == "0" %>
 30 minutes 
 	<% end %>
 	
@@ -33,9 +33,9 @@
 	
 	<% end %>
 	
-		<% if @speaking %>
+		<% if @speaking == "1" %>
 		
-		<p><b>Speaking</b></p>
+		<p style="color:#777"><b>SPEAKING</b></p>
 		
 		<p><b>Speech Topic:</b><br/>
 			<%= simple_format(@speech_topic) %>
@@ -44,7 +44,7 @@
 			
 			<% if @qa == "1"%>
 			
-			<p><b>Q&A? Yes
+			<p><b>Q&A?</b> Yes
 			
 						<% unless @qa_duration.blank?%>	
 						<%= @qa_duration %>
