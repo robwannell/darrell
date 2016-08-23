@@ -18,3 +18,7 @@
 /config/database.yml
 /config/secrets.yml
 /config/initializers/setup_mail.rb
+
+public/system/pics/avatars/000/000/001/original/AM_Flotsam_Bay.jpg
+
+
